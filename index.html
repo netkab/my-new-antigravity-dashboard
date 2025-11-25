@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minoris Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo-area">
+        <img src="./logo.png" alt="Minoris Logo" class="company-logo" />
+        <span class="company-name">MINORIS.AI</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-tab="live-incidents">
+          <span class="icon">⚡</span> Live Incidents
+        </a>
+        <a href="#" class="nav-item" data-tab="performance">
+          <span class="icon">📈</span> Performance
+        </a>
+        <a href="#" class="nav-item" data-tab="policy-manager">
+          <span class="icon">⚙️</span> Policy Manager
+        </a>
+        <a href="#" class="nav-item" data-tab="investigation">
+          <span class="icon">👥</span> Investigation
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="threat-badge">
+          <span class="dot"></span> ACTIVE THREAT DETECTED
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div id="live-incidents" class="tab-content active">
+        <div class="alert-list">
+          <!-- Alert 1: Root Cause Analysis -->
+          <div class="alert-item active">
+            <div class="alert-header-row">
+              <span class="chevron">▼</span>
+              <span class="alert-title">Alert #802: Root Cause Analysis</span>
+              <div class="alert-badges">
+                <span class="badge critical"
+                  style="color: #ff4d4d; background: rgba(255, 77, 77, 0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-left: 10px;">High
+                  Impact</span>
+              </div>
+            </div>
+            <div class="alert-body">
+              <div class="cards-container">
+                <!-- Card 1: Contextual Correlation -->
+                <div class="dashboard-card">
+                  <h3 class="card-title">STEP 1: CONTEXTUAL CORRELATION</h3>
+
+                  <div class="chart-container">
+                    <div class="chart-annotation">
+                      <span class="annotation-icon">@</span> Correlated with "Summer_Referral" Launch
+                      <div class="annotation-arrow"></div>
+                    </div>
+                    <div class="bar-chart">
+                      <div class="bar" style="height: 30%"></div>
+                      <div class="bar" style="height: 30%"></div>
+                      <div class="bar" style="height: 25%"></div>
+                      <div class="bar" style="height: 35%"></div>
+                      <div class="bar" style="height: 35%"></div>
+                      <div class="bar" style="height: 40%"></div>
+                      <div class="bar highlight" style="height: 60%"></div>
+                      <div class="bar highlight" style="height: 85%"></div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer">
+                    <span class="clock-icon">🕒</span> Fraud spike aligned perfectly with Promo Code deployment at
+                    14:00.
+                  </div>
+                </div>
+
+                <!-- Card 2: Agentic Diagnosis -->
+                <div class="dashboard-card">
+                  <h3 class="card-title">STEP 2: AGENTIC DIAGNOSIS</h3>
+
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon"></div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Root Cause Identified</h4>
+                      <p>Loophole found in <span class="code-ref">referral_bonus_logic.py</span>. Bots are creating
+                        circular referrals to drain wallet credits.</p>
+                    </div>
+                  </div>
+
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon magic">✨</div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Automated Action Taken</h4>
+                      <p>Applied velocity limit: <span class="highlight-text">Max 2 referrals / hour</span> per IP
+                        subnet.</p>
+                      <p class="success-text">🛡️ 4,500 bot accounts blocked. $45k saved.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alert 2: Automated Tuning -->
+          <div class="alert-item">
+            <div class="alert-header-row">
+              <span class="chevron">▶</span>
+              <span class="alert-title">Alert #803: Automated Tuning</span>
+              <div class="alert-badges">
+                <span class="badge warning"
+                  style="color: #fbbf24; background: rgba(251, 191, 36, 0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-left: 10px;">Medium
+                  Impact</span>
+              </div>
+            </div>
+            <div class="alert-body">
+              <div class="dashboard-card">
+                <h3 class="card-title">STRATEGIC RESPONSE</h3>
+                <div class="diagnosis-item">
+                  <div class="diagnosis-icon-container">
+                    <div class="diagnosis-icon"></div>
+                  </div>
+                  <div class="diagnosis-content">
+                    <h4>Context & Reasoning</h4>
+                    <p>Attack detected during active promo campaign. Need to block the attack without killing the promo
+                      for legitimate users.</p>
+                  </div>
+                </div>
+                <div class="diagnosis-item">
+                  <div class="diagnosis-icon-container">
+                    <div class="diagnosis-icon magic">✨</div>
+                  </div>
+                  <div class="diagnosis-content">
+                    <h4>Automated Output</h4>
+                    <p>Suggested rule adjustments to block the attack without affecting the promo.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alert 3: Vendor Optimization -->
+          <div class="alert-item">
+            <div class="alert-header-row">
+              <span class="chevron">▶</span>
+              <span class="alert-title">Alert #804: Vendor Optimization</span>
+              <div class="alert-badges">
+                <span class="badge info"
+                  style="color: #60a5fa; background: rgba(96, 165, 250, 0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-left: 10px;">Optimization</span>
+              </div>
+            </div>
+            <div class="alert-body">
+              <div class="dashboard-card">
+                <h3 class="card-title">COST OPTIMIZATION</h3>
+                <div class="diagnosis-item">
+                  <div class="diagnosis-icon-container">
+                    <div class="diagnosis-icon"></div>
+                  </div>
+                  <div class="diagnosis-content">
+                    <h4>Traffic Analysis</h4>
+                    <p>High cost detected in low-risk segments. 40% of verification calls are redundant.</p>
+                  </div>
+                </div>
+                <div class="diagnosis-item">
+                  <div class="diagnosis-icon-container">
+                    <div class="diagnosis-icon magic">✨</div>
+                  </div>
+                  <div class="diagnosis-content">
+                    <h4>Dynamic Routing</h4>
+                    <p>Dynamic routing enabled to reduce costs on low-risk segments.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Performance Tab -->
+      <div id="performance" class="tab-content">
+        <div class="performance-grid">
+          <!-- Row 1: KPIs -->
+          <div class="kpi-row">
+            <div class="kpi-card">
+              <div class="kpi-title">Approval Rate</div>
+              <div class="kpi-value-row">
+                <span class="kpi-value">96%</span>
+                <span class="kpi-badge success">+1.2%</span>
+              </div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Model Latency</div>
+              <div class="kpi-value-row">
+                <span class="kpi-value">820ms</span>
+                <span class="kpi-badge success">-5%</span>
+              </div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Vendor SLA</div>
+              <div class="kpi-value-row">
+                <span class="kpi-value">99.7%</span>
+                <span class="kpi-badge neutral">stable</span>
+              </div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Chargeback Rate</div>
+              <div class="kpi-value-row">
+                <span class="kpi-value">0.09%</span>
+                <span class="kpi-badge success">-0.01%</span>
+              </div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Fraud Resiliency</div>
+              <div class="kpi-value-row">
+                <span class="kpi-value">87 / 100</span>
+                <span class="kpi-badge info">i</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Charts -->
+          <div class="charts-row">
+            <div class="chart-card">
+              <div class="card-header">Transaction Volume & Approval Rate</div>
+              <div class="chart-placeholder">
+                <svg viewBox="0 0 600 200" width="100%" height="100%" preserveAspectRatio="none">
+                  <!-- Grid lines -->
+                  <line x1="0" y1="40" x2="600" y2="40" stroke="#334155" stroke-dasharray="4" />
+                  <line x1="0" y1="80" x2="600" y2="80" stroke="#334155" stroke-dasharray="4" />
+                  <line x1="0" y1="120" x2="600" y2="120" stroke="#334155" stroke-dasharray="4" />
+                  <line x1="0" y1="160" x2="600" y2="160" stroke="#334155" stroke-dasharray="4" />
+
+                  <!-- Volume (Blue) -->
+                  <path d="M0,120 C100,100 200,110 300,80 S500,60 600,50" fill="none" stroke="#3b82f6"
+                    stroke-width="2" />
+                  <circle cx="150" cy="108" r="3" fill="#3b82f6" />
+                  <circle cx="300" cy="80" r="3" fill="#3b82f6" />
+                  <circle cx="450" cy="55" r="3" fill="#3b82f6" />
+
+                  <!-- Approval (Green) -->
+                  <path d="M0,50 C150,50 300,45 450,40 S600,35 600,35" fill="none" stroke="#4ade80" stroke-width="2" />
+                  <circle cx="150" cy="50" r="3" fill="#4ade80" />
+                  <circle cx="300" cy="45" r="3" fill="#4ade80" />
+                  <circle cx="450" cy="40" r="3" fill="#4ade80" />
+
+                  <!-- Labels -->
+                  <text x="10" y="190" fill="#64748b" font-size="10">Nov 1</text>
+                  <text x="150" y="190" fill="#64748b" font-size="10">Nov 2</text>
+                  <text x="300" y="190" fill="#64748b" font-size="10">Nov 3</text>
+                  <text x="450" y="190" fill="#64748b" font-size="10">Nov 4</text>
+                  <text x="580" y="190" fill="#64748b" font-size="10">Nov 5</text>
+                </svg>
+              </div>
+            </div>
+            <div class="chart-card">
+              <div class="card-header">Fraud Rate Forecast</div>
+              <div class="chart-placeholder">
+                <svg viewBox="0 0 300 200" width="100%" height="100%" preserveAspectRatio="none">
+                  <!-- Grid lines -->
+                  <line x1="0" y1="40" x2="300" y2="40" stroke="#334155" stroke-dasharray="4" />
+                  <line x1="0" y1="80" x2="300" y2="80" stroke="#334155" stroke-dasharray="4" />
+                  <line x1="0" y1="120" x2="300" y2="120" stroke="#334155" stroke-dasharray="4" />
+                  <line x1="0" y1="160" x2="300" y2="160" stroke="#334155" stroke-dasharray="4" />
+
+                  <!-- Forecast (Orange) -->
+                  <path d="M0,100 C50,80 100,120 150,60 S250,40 300,80" fill="none" stroke="#f97316" stroke-width="2" />
+                  <circle cx="75" cy="90" r="3" fill="#f97316" />
+                  <circle cx="150" cy="60" r="3" fill="#f97316" />
+                  <circle cx="225" cy="50" r="3" fill="#f97316" />
+
+                  <!-- Labels -->
+                  <text x="10" y="190" fill="#64748b" font-size="10">Nov 1</text>
+                  <text x="80" y="190" fill="#64748b" font-size="10">Nov 2</text>
+                  <text x="150" y="190" fill="#64748b" font-size="10">Nov 3</text>
+                  <text x="220" y="190" fill="#64748b" font-size="10">Nov 4</text>
+                  <text x="280" y="190" fill="#64748b" font-size="10">Nov 5</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3: Regional -->
+          <div class="regional-row">
+            <div class="regional-card">
+              <div class="reg-header">
+                US & CANADA
+                <span class="kpi-badge info">Opportunity</span>
+              </div>
+              <div class="reg-stat">Approval <span>97%</span></div>
+              <div class="reg-stat">Fraud <span>8.0%</span></div>
+              <div class="reg-stat">Volume <span>540k tx</span></div>
+              <div class="reg-trend up">+4.0%</div>
+              <div class="reg-note">Marketing push is adding clean shoppers.</div>
+            </div>
+            <div class="regional-card">
+              <div class="reg-header">
+                EUROPE
+                <span class="kpi-badge warning">Watch</span>
+              </div>
+              <div class="reg-stat">Approval <span>94%</span></div>
+              <div class="reg-stat">Fraud <span>11.0%</span></div>
+              <div class="reg-stat">Volume <span>210k tx</span></div>
+              <div class="reg-trend down">-2.1%</div>
+              <div class="reg-note">Checkout experiment still stabilizing.</div>
+            </div>
+            <div class="regional-card">
+              <div class="reg-header">
+                LATIN AMERICA
+                <span class="kpi-badge critical">Alert</span>
+              </div>
+              <div class="reg-stat">Approval <span>90%</span></div>
+              <div class="reg-stat">Fraud <span>15.0%</span></div>
+              <div class="reg-stat">Volume <span>190k tx</span></div>
+              <div class="reg-trend up">+3.4%</div>
+              <div class="reg-note">Chargebacks concentrated in Brazil.</div>
+            </div>
+            <div class="regional-card">
+              <div class="reg-header">
+                APAC
+                <span class="kpi-badge neutral">Stable</span>
+              </div>
+              <div class="reg-stat">Approval <span>96%</span></div>
+              <div class="reg-stat">Fraud <span>7.0%</span></div>
+              <div class="reg-stat">Volume <span>260k tx</span></div>
+              <div class="reg-trend up">+5.0%</div>
+              <div class="reg-note">Growth led by Japan & Singapore.</div>
+            </div>
+          </div>
+
+          <!-- Row 4: Details -->
+          <div class="details-row">
+            <div class="detail-col">
+              <div class="detail-card">
+                <div class="card-header">
+                  Type of Fraud Mix
+                  <span class="kpi-badge info" style="float: right;">DETECTION COVERAGE 92%</span>
+                </div>
+                <div class="fraud-mix-list">
+                  <div class="mix-item">
+                    <div class="mix-label">
+                      Account Takeover
+                      <span class="trend-text">+8% w/w</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="fill" style="width: 38%; background: #fbbf24;"></div>
+                    </div>
+                    <div class="mix-label" style="font-size: 0.75em; color: #64748b;">38% of detected attempts</div>
+                  </div>
+                  <div class="mix-item">
+                    <div class="mix-label">
+                      Payment Fraud
+                      <span class="trend-text">-2% w/w</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="fill" style="width: 27%; background: #4ade80;"></div>
+                    </div>
+                    <div class="mix-label" style="font-size: 0.75em; color: #64748b;">27% of detected attempts</div>
+                  </div>
+                  <div class="mix-item">
+                    <div class="mix-label">
+                      Friendly Fraud
+                      <span class="trend-text">+2% w/w</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="fill" style="width: 19%; background: #f87171;"></div>
+                    </div>
+                    <div class="mix-label" style="font-size: 0.75em; color: #64748b;">19% of detected attempts</div>
+                  </div>
+                  <div class="mix-item">
+                    <div class="mix-label">
+                      Policy Abuse
+                      <span class="trend-text">+1% w/w</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="fill" style="width: 16%; background: #f87171;"></div>
+                    </div>
+                    <div class="mix-label" style="font-size: 0.75em; color: #64748b;">16% of detected attempts</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="detail-card">
+                <div class="card-header">User Cohort Watchlist</div>
+                <div class="cohort-list">
+                  <div style="font-size: 0.8em; color: #94a3b8; margin-bottom: 10px;">
+                    Focus: Reactivated & promo-sensitive cohorts driving <span style="color: #f87171;">30%</span> of
+                    review queue.
+                  </div>
+                  <div class="cohort-item">
+                    <div>
+                      <div class="cohort-name">NEW SHOPPERS (&lt;30D)</div>
+                      <div class="cohort-stat">89%</div>
+                      <div style="font-size: 0.7em; color: #64748b;">64k users</div>
+                    </div>
+                    <div style="text-align: right;">
+                      <div style="color: #4ade80; font-size: 0.8em;">+2.3%</div>
+                      <span class="kpi-badge warning">Medium risk</span>
+                    </div>
+                  </div>
+                  <div class="cohort-item">
+                    <div>
+                      <div class="cohort-name">RETURNING (30-180D)</div>
+                      <div class="cohort-stat">97%</div>
+                      <div style="font-size: 0.7em; color: #64748b;">120k users</div>
+                    </div>
+                    <div style="text-align: right;">
+                      <div style="color: #4ade80; font-size: 0.8em;">+0.4%</div>
+                      <span class="kpi-badge success">Low risk</span>
+                    </div>
+                  </div>
+                  <div class="cohort-item">
+                    <div>
+                      <div class="cohort-name">POWER USERS (>180D)</div>
+                      <div class="cohort-stat">95%</div>
+                      <div style="font-size: 0.7em; color: #64748b;">48k users</div>
+                    </div>
+                    <div style="text-align: right;">
+                      <div style="color: #94a3b8; font-size: 0.8em;">stable</div>
+                      <span class="kpi-badge success">Low risk</span>
+                    </div>
+                  </div>
+                  <div class="cohort-item">
+                    <div>
+                      <div class="cohort-name">REACTIVATED</div>
+                      <div class="cohort-stat">83%</div>
+                      <div style="font-size: 0.7em; color: #64748b;">21k users</div>
+                    </div>
+                    <div style="text-align: right;">
+                      <div style="color: #4ade80; font-size: 0.8em;">+5.9%</div>
+                      <span class="kpi-badge critical">High risk</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-col">
+              <div class="detail-card">
+                <div class="card-header">
+                  Product Line Snapshot
+                  <div style="float: right; text-align: right;">
+                    <span style="font-size: 0.7em; color: #94a3b8; display: block;">AVG. APPROVAL</span>
+                    <span style="font-size: 1.1em; font-weight: 700;">92.6%</span>
+                  </div>
+                </div>
+                <div class="product-list">
+                  <div class="product-item">
+                    <div>
+                      <div class="prod-name">MARKETPLACE</div>
+                      <div style="font-size: 0.75em; color: #64748b;">480k tx / 24h</div>
+                      <div style="font-size: 0.75em; color: #fbbf24;">0.8% fraud</div>
+                    </div>
+                    <div style="text-align: right;">
+                      <div class="prod-stat">96%</div>
+                      <span class="kpi-badge success">Stable</span>
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <div>
+                      <div class="prod-name">SUBSCRIPTIONS</div>
+                      <div style="font-size: 0.75em; color: #64748b;">220k tx / 24h</div>
+                      <div style="font-size: 0.75em; color: #f87171;">11.0% fraud</div>
+                    </div>
+                    <div style="text-align: right;">
+                      <div class="prod-stat">92%</div>
+                      <span class="kpi-badge warning">Needs tuning</span>
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <div>
+                      <div class="prod-name">PAYOUTS</div>
+                      <div style="font-size: 0.75em; color: #64748b;">160k tx / 24h</div>
+                      <div style="font-size: 0.75em; color: #f87171;">13.0% fraud</div>
+                    </div>
+                    <div style="text-align: right;">
+                      <div class="prod-stat">89%</div>
+                      <span class="kpi-badge critical">Vendor review</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="detail-card" style="flex: 1; display: flex; flex-direction: column;">
+                <div class="card-header">Support Signal Trends</div>
+                <div class="signal-stats">
+                  <div>
+                    <div class="sig-val">2,375</div>
+                    <div class="sig-label">TICKETS / WEEK</div>
+                    <div style="font-size: 0.7em; color: #4ade80;">+12% vs. prior</div>
+                  </div>
+                  <div>
+                    <div class="sig-val">14</div>
+                    <div class="sig-label">AVG ESCALATIONS</div>
+                    <div style="font-size: 0.7em; color: #fbbf24;">Login/OTP heavy</div>
+                  </div>
+                  <div>
+                    <div class="sig-val">68%</div>
+                    <div class="sig-label">SELF-SERVE DEFLECTION</div>
+                    <div style="font-size: 0.7em; color: #94a3b8;">Target > 70%</div>
+                  </div>
+                </div>
+                <div class="area-chart-placeholder" style="flex: 1; min-height: 100px;">
+                  <svg viewBox="0 0 400 100" width="100%" height="100%" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:0.3" />
+                        <stop offset="100%" style="stop-color:#00f0ff;stop-opacity:0" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M0,80 C100,70 200,40 300,50 S400,60 400,60 V100 H0 Z" fill="url(#grad1)" />
+                    <path d="M0,80 C100,70 200,40 300,50 S400,60 400,60" fill="none" stroke="#00f0ff"
+                      stroke-width="2" />
+                  </svg>
+                </div>
+                <div style="margin-top: 15px; font-size: 0.8em;">
+                  <div
+                    style="display: flex; justify-content: space-between; border-bottom: 1px solid #334155; padding: 5px 0;">
+                    <span>Mon</span>
+                    <span><span style="color: #cbd5e1;">210 tickets</span> <span style="color: #fbbf24;">12
+                        escalations</span></span>
+                  </div>
+                  <div
+                    style="display: flex; justify-content: space-between; border-bottom: 1px solid #334155; padding: 5px 0;">
+                    <span>Tue</span>
+                    <span><span style="color: #cbd5e1;">265 tickets</span> <span style="color: #fbbf24;">15
+                        escalations</span></span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; padding: 5px 0;">
+                    <span>Wed</span>
+                    <span><span style="color: #cbd5e1;">242 tickets</span> <span style="color: #fbbf24;">13
+                        escalations</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
