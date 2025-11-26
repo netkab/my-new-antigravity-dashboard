@@ -715,3 +715,95 @@ body {
   height: 100px;
   width: 100%;
 }
+
+/* Chart Styles */
+.chart-container {
+  position: relative;
+  height: 120px;
+  margin: 1.5rem 0;
+}
+
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #334155;
+}
+
+.bar {
+  width: 8%;
+  background-color: #334155;
+  border-radius: 2px 2px 0 0;
+  transition: all 0.3s ease;
+}
+
+.bar:hover {
+  background-color: #475569;
+}
+
+.bar.highlight {
+  background-color: #f87171;
+  box-shadow: 0 0 10px rgba(248, 113, 113, 0.3);
+}
+
+.chart-annotation {
+  position: absolute;
+  top: 35%;
+  /* Lowered into the chart area */
+  left: 78%;
+  /* Adjusted to align with the 7th bar (inflection point) */
+  transform: translate(-50%, -100%);
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  padding: 8px 12px;
+  /* Increased padding */
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 10;
+  pointer-events: none;
+  white-space: normal;
+  /* Allow wrapping if needed, though text is short */
+  width: max-content;
+  /* Ensure it fits the content */
+  max-width: 200px;
+  /* Prevent it from being too wide */
+}
+
+.chart-annotation::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background-color: #0f172a;
+  border-right: 1px solid #334155;
+  border-bottom: 1px solid #334155;
+}
+
+.annotation-icon {
+  color: #60a5fa;
+  font-weight: bold;
+}
+
+.annotation-arrow {
+  display: none;
+  /* Replaced by CSS pseudo-element */
+}
+
+/* Alert 2 Specific Annotation Positioning */
+.chart-annotation.alert-2-annotation {
+  left: 62.5%;
+  /* 250 / 400 = 62.5% */
+  top: 60%;
+  /* Pointing to cy=70, adjusted for tooltip height */
+  transform: translate(-50%, -100%);
+}
