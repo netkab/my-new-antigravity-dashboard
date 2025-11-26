@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" >
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script   src="./assets/index-5FQc6taw.js"></script>
-  <link rel="stylesheet"  href="./assets/index-i_l4nqxm.css">
+  <script   src="./assets/index-vVnjyhtk.js"></script>
+  <link rel="stylesheet"  href="./assets/index-BYwDe6X5.css">
 </head>
 
 <body>
@@ -27,8 +27,8 @@
         <a href="#" class="nav-item" data-tab="performance">
           <span class="icon">📈</span> Performance
         </a>
-        <a href="#" class="nav-item" data-tab="policy-manager">
-          <span class="icon">⚙️</span> Policy Manager
+        <a href="#" class="nav-item" data-tab="strategy">
+          <span class="icon">⚙️</span> Strategy
         </a>
         <a href="#" class="nav-item" data-tab="investigation">
           <span class="icon">👥</span> Investigation
@@ -176,24 +176,180 @@
               </div>
             </div>
             <div class="alert-body">
-              <div class="dashboard-card">
-                <h3 class="card-title">COST OPTIMIZATION</h3>
-                <div class="diagnosis-item">
-                  <div class="diagnosis-icon-container">
-                    <div class="diagnosis-icon"></div>
+              <div class="cards-container">
+                <div class="dashboard-card">
+                  <h3 class="card-title">VENDOR STACK SCAN</h3>
+                  <p>Spend monitors escalated after the EU low-risk lane started overusing the top-tier vendor. Policy
+                    trace shows sandbox tenants still pinned to premium checks.</p>
+                  <div class="mini-metric-grid">
+                    <div class="mini-metric">
+                      <span class="label">Daily spend</span>
+                      <span class="value">$82K</span>
+                      <span class="change negative">+18%</span>
+                    </div>
+                    <div class="mini-metric">
+                      <span class="label">Redundant calls</span>
+                      <span class="value">41%</span>
+                      <span class="change negative">▲ 11 pts</span>
+                    </div>
+                    <div class="mini-metric">
+                      <span class="label">Risk score impact</span>
+                      <span class="value">+0.2%</span>
+                      <span class="change neutral">flat</span>
+                    </div>
                   </div>
-                  <div class="diagnosis-content">
-                    <h4>Traffic Analysis</h4>
-                    <p>High cost detected in low-risk segments. 40% of verification calls are redundant.</p>
+                  <div class="chart-container" style="height: 180px;">
+                    <div class="chart-annotation" style="left: 60%; top: 28%;">
+                      <span class="annotation-icon">@</span> Switchback test
+                      <div class="annotation-arrow"></div>
+                    </div>
+                    <svg viewBox="0 0 420 150" width="100%" height="100%" preserveAspectRatio="none">
+                      <!-- Grid -->
+                      <line x1="0" y1="30" x2="420" y2="30" stroke="#334155" stroke-dasharray="4" />
+                      <line x1="0" y1="70" x2="420" y2="70" stroke="#334155" stroke-dasharray="4" />
+                      <line x1="0" y1="110" x2="420" y2="110" stroke="#334155" stroke-dasharray="4" />
+
+                      <!-- Bars -->
+                      <rect x="20" y="60" width="60" height="70" fill="#60a5fa" rx="6" />
+                      <rect x="120" y="35" width="60" height="95" fill="#34d399" rx="6" />
+                      <rect x="220" y="20" width="60" height="110" fill="#f97316" rx="6" />
+                      <rect x="320" y="65" width="60" height="65" fill="#a78bfa" rx="6" />
+
+                      <!-- Cost ceiling -->
+                      <path d="M0,50 L420,50" stroke="#facc15" stroke-dasharray="5 5" stroke-width="2" />
+                      <text x="5" y="45" fill="#facc15" font-size="10">Budget guardrail</text>
+
+                      <!-- Labels -->
+                      <text x="30" y="140" fill="#94a3b8" font-size="10">Zephyr</text>
+                      <text x="125" y="140" fill="#94a3b8" font-size="10">Halo</text>
+                      <text x="232" y="140" fill="#94a3b8" font-size="10">Sentinel</text>
+                      <text x="330" y="140" fill="#94a3b8" font-size="10">Mercury</text>
+                    </svg>
+                  </div>
+                  <div class="card-footer">
+                    <span class="clock-icon">🕒</span> Ops routed 68% of sandbox checks through Sentinel in the last 30
+                    minutes.
                   </div>
                 </div>
-                <div class="diagnosis-item">
-                  <div class="diagnosis-icon-container">
-                    <div class="diagnosis-icon magic">✨</div>
+
+                <div class="dashboard-card">
+                  <h3 class="card-title">AGENTIC ROUTING PLAN</h3>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon"></div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Policy rewrite</h4>
+                      <p>Updated <span class="code-ref">vendor_router.yaml</span> to weight low-risk cohorts toward
+                        Zephyr/Halo mix and reserve Sentinel for step-up flows.</p>
+                    </div>
                   </div>
-                  <div class="diagnosis-content">
-                    <h4>Dynamic Routing</h4>
-                    <p>Dynamic routing enabled to reduce costs on low-risk segments.</p>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon magic">✨</div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Automation outcome</h4>
+                      <p>Agent approved new policy, replayed 5k historical decisions, and published guardrails to the
+                        orchestrator.</p>
+                      <p class="success-text">🛡️ Forecasted savings: $24K / day without impact to fraud posture.</p>
+                    </div>
+                  </div>
+                  <div class="vendor-route-timeline">
+                    <div class="route-step">
+                      <span class="step-dot"></span>
+                      <div>
+                        <strong>T+0 mitigation</strong>
+                        <p>Throttle Sentinel usage on sandbox tenant IDs 223-231 (already live).</p>
+                      </div>
+                    </div>
+                    <div class="route-step">
+                      <span class="step-dot warning"></span>
+                      <div>
+                        <strong>Rolling switchback</strong>
+                        <p>50/50 split to verify latency and approval deltas across Zephyr vs Halo lanes.</p>
+                      </div>
+                    </div>
+                    <div class="route-step">
+                      <span class="step-dot success"></span>
+                      <div>
+                        <strong>Final hardening</strong>
+                        <p>Retrofit policy into production once variance &lt; 1.5% for 6 hrs.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alert 4: Agent-Driven Bot Surge -->
+          <div class="alert-item">
+            <div class="alert-header-row">
+              <span class="chevron">▶</span>
+              <span class="alert-title">Alert #818: Bot Activity Verified as Safe</span>
+              <div class="alert-badges">
+                <span class="badge success"
+                  style="color: #4ade80; background: rgba(74, 222, 128, 0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-left: 10px;">Greenlit</span>
+              </div>
+            </div>
+            <div class="alert-body">
+              <div class="cards-container">
+                <div class="dashboard-card">
+                  <h3 class="card-title">SURGE REPLAY</h3>
+                  <p>Autonomous monitors detected a 6× spike in checkout bots across sandbox tenants. Session
+                    fingerprints and API keys matched the SOC's Ops-Agent stress test plan.</p>
+                  <div class="chart-container" style="height: 180px;">
+                    <div class="chart-annotation" style="left: 70%; top: 25%;">
+                      <span class="annotation-icon">@</span> Agent playback verified
+                      <div class="annotation-arrow"></div>
+                    </div>
+                    <svg viewBox="0 0 400 140" width="100%" height="100%" preserveAspectRatio="none">
+                      <!-- Grid lines -->
+                      <line x1="0" y1="30" x2="400" y2="30" stroke="#334155" stroke-dasharray="4" />
+                      <line x1="0" y1="70" x2="400" y2="70" stroke="#334155" stroke-dasharray="4" />
+                      <line x1="0" y1="110" x2="400" y2="110" stroke="#334155" stroke-dasharray="4" />
+
+                      <!-- Bot Velocity -->
+                      <path d="M0,105 L60,95 L120,90 L180,85 L220,35 L300,40 L360,45 L400,42" fill="none" stroke="#f87171"
+                        stroke-width="2" />
+                      <circle cx="220" cy="35" r="5" fill="#f87171" />
+                      <circle cx="360" cy="45" r="4" fill="#f87171" />
+
+                      <!-- Policy Threshold -->
+                      <path d="M0,95 L400,95" fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="6 4" />
+
+                      <!-- Agent Confidence -->
+                      <path d="M0,120 L100,115 L160,100 L220,60 L280,55 L340,52 L400,50" fill="none" stroke="#34d399"
+                        stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="card-footer">
+                    <span class="clock-icon">🕒</span> SOC confirmed replay began 14:35 UTC with Ops-Agent-24 scripts.
+                  </div>
+                </div>
+                <div class="dashboard-card">
+                  <h3 class="card-title">AGENTIC DETERMINATION</h3>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon"></div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Signals Cross-Checked</h4>
+                      <p>Botnet telemetry correlated with <span class="code-ref">agent_lab.yaml</span> signatures and
+                        whitelisted CIDR ranges.</p>
+                    </div>
+                  </div>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon magic">✨</div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Outcome</h4>
+                      <p>Escalation downgraded. Model paused enforcement and tagged traffic as <span
+                          class="highlight-text">agent-driven QA</span>.</p>
+                      <p class="success-text">🛡️ Guardrails stayed armed; customer flow uninterrupted.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -301,6 +457,145 @@
                   <text x="220" y="190" fill="#64748b" font-size="10">Nov 4</text>
                   <text x="280" y="190" fill="#64748b" font-size="10">Nov 5</text>
                 </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3: Additional Insights -->
+          <div class="charts-row triple">
+            <div class="chart-card">
+              <div class="card-header">User Cohorts Behavior</div>
+              <div class="chart-placeholder">
+                <svg viewBox="0 0 600 200" width="100%" height="100%" preserveAspectRatio="none">
+                  <!-- Grid -->
+                  <line x1="0" y1="40" x2="600" y2="40" stroke="#334155" stroke-dasharray="4" />
+                  <line x1="0" y1="80" x2="600" y2="80" stroke="#334155" stroke-dasharray="4" />
+                  <line x1="0" y1="120" x2="600" y2="120" stroke="#334155" stroke-dasharray="4" />
+
+                  <!-- Area fills -->
+                  <path d="M0,150 L80,135 L160,125 L240,110 L320,95 L400,90 L480,100 L560,110 L560,200 L0,200 Z"
+                    fill="rgba(56,189,248,0.12)" />
+                  <path d="M0,180 L80,175 L160,165 L240,150 L320,140 L400,130 L480,125 L560,120 L560,200 L0,200 Z"
+                    fill="rgba(167,139,250,0.08)" />
+
+                  <!-- New Users -->
+                  <path d="M0,140 L80,120 L160,105 L240,92 L320,82 L400,88 L480,94 L560,100"
+                    fill="none" stroke="#38bdf8" stroke-width="2" />
+                  <circle cx="120" cy="112" r="3" fill="#38bdf8" />
+                  <circle cx="240" cy="92" r="4" fill="#38bdf8" />
+                  <circle cx="440" cy="90" r="3" fill="#38bdf8" />
+
+                  <!-- Returning Users -->
+                  <path d="M0,155 L80,150 L160,145 L240,138 L320,130 L400,118 L480,112 L560,107"
+                    fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="6 4" />
+                  <circle cx="360" cy="124" r="4" fill="#a78bfa" />
+
+                  <!-- Power Users -->
+                  <path d="M0,185 L80,172 L160,160 L240,142 L320,125 L400,112 L480,106 L560,104"
+                    fill="none" stroke="#f97316" stroke-width="2" />
+                  <circle cx="320" cy="125" r="4" fill="#f97316" />
+
+                  <!-- Retention marker -->
+                  <line x1="300" y1="20" x2="300" y2="180" stroke="#64748b" stroke-dasharray="2 4" />
+                  <text x="310" y="30" fill="#94a3b8" font-size="10">Week 5 retention</text>
+                </svg>
+              </div>
+              <div class="chart-legend">
+                <span class="legend-item"><span class="legend-dot" style="background:#38bdf8"></span>New</span>
+                <span class="legend-item"><span class="legend-dot" style="background:#a78bfa"></span>Returning</span>
+                <span class="legend-item"><span class="legend-dot" style="background:#f97316"></span>Power</span>
+              </div>
+            </div>
+            <div class="chart-card">
+              <div class="card-header">Support Tickets Trend</div>
+              <div class="chart-placeholder">
+                <svg viewBox="0 0 600 200" width="100%" height="100%" preserveAspectRatio="none">
+                  <!-- Grid -->
+                  <line x1="0" y1="40" x2="600" y2="40" stroke="#334155" stroke-dasharray="4" />
+                  <line x1="0" y1="80" x2="600" y2="80" stroke="#334155" stroke-dasharray="4" />
+                  <line x1="0" y1="120" x2="600" y2="120" stroke="#334155" stroke-dasharray="4" />
+                  <line x1="0" y1="160" x2="600" y2="160" stroke="#334155" stroke-dasharray="4" />
+
+                  <!-- Separated backlog area -->
+                  <path d="M0,130 L80,128 L160,125 L240,135 L320,150 L400,160 L480,148 L560,140 L560,200 L0,200 Z"
+                    fill="rgba(248,113,113,0.08)" />
+
+                  <!-- Open tickets -->
+                  <path d="M0,150 L80,138 L160,130 L240,122 L320,138 L400,152 L480,140 L560,132"
+                    fill="none" stroke="#f87171" stroke-width="2" />
+                  <circle cx="200" cy="126" r="3" fill="#f87171" />
+                  <circle cx="360" cy="145" r="4" fill="#f87171" />
+                  <circle cx="520" cy="135" r="3" fill="#f87171" />
+
+                  <!-- Resolved tickets -->
+                  <path d="M0,120 L80,112 L160,104 L240,92 L320,98 L400,105 L480,94 L560,86"
+                    fill="none" stroke="#4ade80" stroke-width="2" />
+                  <circle cx="260" cy="94" r="3" fill="#4ade80" />
+                  <circle cx="440" cy="100" r="3" fill="#4ade80" />
+
+                  <!-- Backlog threshold -->
+                  <path d="M0,130 L600,130" stroke="#facc15" stroke-width="2" stroke-dasharray="5 5" />
+
+                  <!-- Ticket spikes -->
+                  <rect x="300" y="110" width="6" height="40" fill="rgba(248,181,0,0.6)" />
+                  <rect x="420" y="120" width="6" height="35" fill="rgba(248,181,0,0.6)" />
+                  <text x="310" y="115" fill="#facc15" font-size="9">Promo launch</text>
+                </svg>
+              </div>
+              <div class="chart-legend">
+                <span class="legend-item"><span class="legend-dot" style="background:#f87171"></span>Open</span>
+                <span class="legend-item"><span class="legend-dot" style="background:#4ade80"></span>Resolved</span>
+                <span class="legend-item"><span class="legend-dot" style="background:#facc15"></span>Threshold</span>
+              </div>
+            </div>
+            <div class="chart-card">
+              <div class="card-header">Product Line Snapshot</div>
+              <div class="chart-placeholder">
+                <svg viewBox="0 0 600 200" width="100%" height="100%" preserveAspectRatio="none">
+                  <!-- Grid -->
+                  <line x1="0" y1="40" x2="600" y2="40" stroke="#334155" stroke-dasharray="4" />
+                  <line x1="0" y1="80" x2="600" y2="80" stroke="#334155" stroke-dasharray="4" />
+                  <line x1="0" y1="120" x2="600" y2="120" stroke="#334155" stroke-dasharray="4" />
+                  <line x1="0" y1="160" x2="600" y2="160" stroke="#334155" stroke-dasharray="4" />
+
+                  <!-- Bars -->
+                  <rect x="40" y="95" width="50" height="65" fill="#38bdf8" rx="6" />
+                  <rect x="140" y="70" width="50" height="90" fill="#34d399" rx="6" />
+                  <rect x="240" y="50" width="50" height="110" fill="#f97316" rx="6" />
+                  <rect x="340" y="80" width="50" height="80" fill="#a78bfa" rx="6" />
+                  <rect x="440" y="105" width="50" height="55" fill="#f87171" rx="6" />
+                  <rect x="540" y="85" width="50" height="75" fill="#22d3ee" rx="6" />
+
+                  <!-- Revenue logits -->
+                  <path d="M65,95 L165,75 L265,55 L365,85 L465,110 L565,90" fill="none" stroke="#facc15"
+                    stroke-width="2" stroke-dasharray="4 3" />
+                  <circle cx="265" cy="55" r="4" fill="#facc15" />
+
+                  <!-- Conversion overlay -->
+                  <path d="M65,160 L165,150 L265,130 L365,135 L465,140 L565,145" fill="none" stroke="#94a3b8"
+                    stroke-width="2" />
+
+                  <!-- Top markers -->
+                  <circle cx="65" cy="95" r="3" fill="#38bdf8" />
+                  <circle cx="165" cy="70" r="3" fill="#34d399" />
+                  <circle cx="265" cy="50" r="3" fill="#f97316" />
+                  <circle cx="365" cy="80" r="3" fill="#a78bfa" />
+                  <circle cx="465" cy="105" r="3" fill="#f87171" />
+                  <circle cx="565" cy="85" r="3" fill="#22d3ee" />
+
+                  <!-- Labels -->
+                  <text x="48" y="188" fill="#64748b" font-size="10">IDV</text>
+                  <text x="148" y="188" fill="#64748b" font-size="10">Wallet</text>
+                  <text x="248" y="188" fill="#64748b" font-size="10">Lending</text>
+                  <text x="348" y="188" fill="#64748b" font-size="10">Risk API</text>
+                  <text x="448" y="188" fill="#64748b" font-size="10">Payouts</text>
+                  <text x="548" y="188" fill="#64748b" font-size="10">Trust</text>
+                </svg>
+              </div>
+              <div class="chart-legend">
+                <span class="legend-item"><span class="legend-dot" style="background:#f97316"></span>GMV</span>
+                <span class="legend-item"><span class="legend-dot" style="background:#facc15"></span>Revenue</span>
+                <span class="legend-item"><span class="legend-dot" style="background:#94a3b8"></span>Conversion</span>
               </div>
             </div>
           </div>
@@ -413,12 +708,154 @@
         </div>
       </div>
 
-      <!-- Other Tabs (placeholders) -->
-      <div id="policy-manager" class="tab-content">
-        <p>Policy Manager content...</p>
+      <!-- Strategy Tab -->
+      <div id="strategy" class="tab-content">
+        <div class="strategy-grid">
+          <div class="dashboard-card strategy-card">
+                <div class="strategy-header">
+                  <h3>Login Challenge Optimization</h3>
+                  <span class="impact-pill positive">+6% completion</span>
+                </div>
+                <p>Challenge only new or high-risk IPs instead of every login. Historical simulations show <strong>35% fewer false positives</strong> while login completion improves by ~6%.</p>
+          </div>
+          <div class="dashboard-card strategy-card">
+            <div class="strategy-header">
+              <h3>High Decline Threshold</h3>
+              <span class="impact-pill positive">+2.5% approvals</span>
+            </div>
+            <p>Raising the fraud score threshold from <span class="code-ref">0.6 → 0.7</span> on trusted segments recovers ~2.5% more approvals with &lt;0.05% net fraud impact.</p>
+          </div>
+          <div class="dashboard-card strategy-card">
+            <div class="strategy-header">
+              <h3>Shorten the Checkout Experience</h3>
+              <span class="impact-pill warning">5–8% completion lift</span>
+            </div>
+            <p>Checkout flow takes 20–30% longer than peers. Auto-fill or drop the optional identity prompt to reduce attrition and unlock a 5–8% conversion bump.</p>
+          </div>
+          <div class="dashboard-card strategy-card">
+            <div class="strategy-header">
+              <h3>Vendor Load Balancing</h3>
+              <span class="impact-pill info">+6% conversion</span>
+            </div>
+            <p>Vendor B currently handles ~80% of traffic. Route new EU users to Vendor A first to balance load (~40/60 split) and cut latency, adding an estimated +6% conversion.</p>
+          </div>
+          <div class="dashboard-card strategy-card">
+            <div class="strategy-header">
+              <h3>3DS Exemption Strategy</h3>
+              <span class="impact-pill positive">-25% friction</span>
+            </div>
+            <p>Enable 3DS exemptions for low-risk returning users. Removes friction for ~25% of shoppers and improves net checkout conversion by ~4%.</p>
+          </div>
+          <div class="dashboard-card strategy-card">
+            <div class="strategy-header">
+              <h3>Fill the Missing Decline Reason Code</h3>
+              <span class="impact-pill neutral">Faster investigations</span>
+            </div>
+            <p>Add a required field indicating which rule/system decided the decline. Customers who added this improved investigation speed by &gt;50% and reduced escalations.</p>
+          </div>
+        </div>
       </div>
       <div id="investigation" class="tab-content">
-        <p>Investigation content...</p>
+        <div class="investigation-grid">
+          <div class="chat-panel">
+            <div class="chat-header">
+              <h3>Investigation Copilot</h3>
+              <p>Ask ad-hoc questions and let Minoris correlate telemetry, policies, and vendor data.</p>
+            </div>
+            <div class="chat-window">
+              <div class="chat-message user" id="analysis-query-bubble">
+                why did the approval rate in LATAM dropped last week?
+              </div>
+              <div class="chat-message bot">
+                I’ll correlate regional approvals, vendor routing, and promo signals for you.
+              </div>
+              <div class="chat-hint">Use natural language prompts to investigate incidents on demand.</div>
+            </div>
+            <form id="analysis-form" class="analysis-form">
+              <textarea id="analysis-input" rows="3">why did the approval rate in LATAM dropped last week?</textarea>
+              <button type="submit" class="generate-button">Generate</button>
+            </form>
+          </div>
+          <div class="analysis-panel">
+            <div id="analysis-spinner" class="analysis-spinner hidden">
+              <div class="spinner"></div>
+              <span>Generating analysis...</span>
+            </div>
+            <div id="analysis-output" class="analysis-output hidden">
+              <div class="cards-container">
+                <div class="dashboard-card">
+                  <h3 class="card-title">STEP 1: LATAM APPROVAL SEQUENCE</h3>
+                  <p>Regional tracing shows approvals dipped 5.8 pts between Tue–Thu. Drop aligns with a vendor policy
+                    tweak plus localized payment holiday in Brazil.</p>
+                  <div class="chart-container" style="height: 170px;">
+                    <div class="chart-annotation" style="left: 58%; top: 32%;">
+                      <span class="annotation-icon">@</span> Vendor shift
+                      <div class="annotation-arrow"></div>
+                    </div>
+                    <svg viewBox="0 0 420 150" width="100%" height="100%" preserveAspectRatio="none">
+                      <!-- Grid -->
+                      <line x1="0" y1="30" x2="420" y2="30" stroke="#334155" stroke-dasharray="4" />
+                      <line x1="0" y1="70" x2="420" y2="70" stroke="#334155" stroke-dasharray="4" />
+                      <line x1="0" y1="110" x2="420" y2="110" stroke="#334155" stroke-dasharray="4" />
+
+                      <!-- Approval -->
+                      <path d="M0,60 L60,58 L120,55 L180,70 L240,95 L300,92 L360,88 L420,80" fill="none"
+                        stroke="#60a5fa" stroke-width="3" />
+                      <circle cx="240" cy="95" r="4" fill="#f87171" />
+                      <circle cx="360" cy="88" r="4" fill="#60a5fa" />
+                      <circle cx="300" cy="92" r="4" fill="#60a5fa" />
+
+                      <!-- Guardrail -->
+                      <path d="M0,75 L420,75" stroke="#facc15" stroke-width="2" stroke-dasharray="6 4" />
+
+                      <!-- Labels -->
+                      <text x="0" y="140" fill="#64748b" font-size="10">Mon</text>
+                      <text x="80" y="140" fill="#64748b" font-size="10">Tue</text>
+                      <text x="160" y="140" fill="#64748b" font-size="10">Wed</text>
+                      <text x="240" y="140" fill="#64748b" font-size="10">Thu</text>
+                      <text x="320" y="140" fill="#64748b" font-size="10">Fri</text>
+                      <text x="400" y="140" fill="#64748b" font-size="10">Sat</text>
+                    </svg>
+                  </div>
+                  <ul class="analysis-list">
+                    <li><strong>43% of declines</strong> tied to Sentinel step-up paths for gig riders.</li>
+                    <li>Brazilian bank holiday added +220ms latency, causing abandonment.</li>
+                    <li>Zephyr vendor would have cleared 78% of the rejected cohort.</li>
+                  </ul>
+                </div>
+                <div class="dashboard-card">
+                  <h3 class="card-title">STEP 2: SIGNAL CORRELATION</h3>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon"></div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Promo cross-check</h4>
+                      <p>Drop overlapped with <span class="code-ref">ride_latam_bonus</span> campaign. Promo traffic
+                        skewed toward wallets with low trust scores.</p>
+                    </div>
+                  </div>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon magic">✨</div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Automated remedy</h4>
+                      <p>Copilot proposes rebalancing vendor mix (70% Zephyr / 30% Sentinel) and pre-approving promo
+                        wallets that cleared biometric checks.</p>
+                      <p class="success-text">🛡️ Projected recovery: +4.9 approval pts within 24h.</p>
+                    </div>
+                  </div>
+                  <div class="analysis-actions">
+                    <span class="action-pill">Throttle Sentinel in BR/AZ</span>
+                    <span class="action-pill">Extend promo holdouts</span>
+                    <span class="action-pill">Latency A/B</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </div>

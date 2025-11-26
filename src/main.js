@@ -46,4 +46,33 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Investigation tab chat interaction
+  const analysisForm = document.getElementById('analysis-form');
+  const analysisInput = document.getElementById('analysis-input');
+  const analysisSpinner = document.getElementById('analysis-spinner');
+  const analysisOutput = document.getElementById('analysis-output');
+  const analysisQueryBubble = document.getElementById('analysis-query-bubble');
+  let analysisTimer;
+
+  if (analysisForm && analysisInput && analysisSpinner && analysisOutput && analysisQueryBubble) {
+    analysisForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const prompt = analysisInput.value.trim();
+      if (!prompt) return;
+
+      analysisQueryBubble.textContent = prompt;
+      analysisSpinner.classList.remove('hidden');
+      analysisOutput.classList.add('hidden');
+
+      if (analysisTimer) {
+        clearTimeout(analysisTimer);
+      }
+
+      analysisTimer = window.setTimeout(() => {
+        analysisSpinner.classList.add('hidden');
+        analysisOutput.classList.remove('hidden');
+      }, 1000);
+    });
+  }
 });
