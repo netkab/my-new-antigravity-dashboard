@@ -26,6 +26,11 @@ try {
     content = content.replace(/Ôû╝/g, '▼');
     content = content.replace(/ÔûÂ/g, '▶');
 
+    // Fix additional emojis
+    content = content.replace(/­ƒòÆ/g, '🕒');
+    content = content.replace(/Ô£¿/g, '✨');
+    content = content.replace(/­ƒøí´©Å/g, '🛡️');
+
     fs.writeFileSync(indexPath, content, 'utf8');
     console.log('Successfully patched docs/index.html for local execution.');
 } catch (err) {

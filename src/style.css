@@ -104,7 +104,7 @@ body {
 /* Main Content */
 .main-content {
   flex: 1;
-  padding: 2rem 3rem;
+  padding: 1.5rem 3rem 2rem 3rem;
   background-color: var(--bg-dark);
 }
 
@@ -112,7 +112,7 @@ body {
 .top-bar {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .threat-badge {
