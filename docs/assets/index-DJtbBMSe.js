@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minoris Dashboard</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" >
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script   src="./assets/index-DJtbBMSe.js"></script>
-  <link rel="stylesheet"  href="./assets/index-BYwDe6X5.css">
-</head>
-
-<body>
-  <div id="app">
-    <aside class="sidebar">
+(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))t(s);new MutationObserver(s=>{for(const a of s)if(a.type==="childList")for(const r of a.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&t(r)}).observe(document,{childList:!0,subtree:!0});function e(s){const a={};return s.integrity&&(a.integrity=s.integrity),s.referrerPolicy&&(a.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?a.credentials="include":s.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function t(s){if(s.ep)return;s.ep=!0;const a=e(s);fetch(s.href,a)}})();const n={metaTitle:"Minoris Dashboard",sidebar:`
       <div class="logo-area">
         <img src="./logo.png" alt="Minoris Logo" class="company-logo" />
         <span class="company-name">MINORIS.AI</span>
@@ -33,10 +17,7 @@
           <span class="icon">👥</span> Investigation
         </a>
       </nav>
-  </aside>
-    <main class="main-content">
-      <div class="top-bar"></div>
-      <div id="live-incidents" class="tab-content active">
+  `,tabs:{liveIncidents:`
         <div class="alert-list">
           <div class="alert-item active">
             <div class="alert-header-row">
@@ -314,8 +295,7 @@
             </div>
           </div>
         </div>
-    </div>
-      <div id="performance" class="tab-content">
+    `,performance:`
         <div class="performance-grid">
           <div class="kpi-row">
             <div class="kpi-card">
@@ -554,8 +534,7 @@
             </div>
           </div>
         </div>
-    </div>
-      <div id="strategy" class="tab-content">
+    `,strategy:`
         <div class="strategy-grid">
           <div class="dashboard-card strategy-card">
             <div class="strategy-header">
@@ -600,8 +579,7 @@
             <p>A large share of declines lacks a clear reason code. Other customers improved investigation speed by &gt;50% after adding a simple field indicating which rule or system made the decision.</p>
           </div>
         </div>
-    </div>
-      <div id="investigation" class="tab-content">
+    `,investigation:`
         <div class="investigation-grid">
           <div class="chat-panel">
             <div class="chat-header">
@@ -695,9 +673,4 @@
             </div>
           </div>
         </div>
-    </div>
-    </main>
-  </div>
-</body>
-
-</html>
+    `}},d=(l,i)=>{const e=document.querySelector(l);e&&(e.innerHTML=i.trim())};document.addEventListener("DOMContentLoaded",()=>{document.title=n.metaTitle,d(".sidebar",n.sidebar),d("#live-incidents",n.tabs.liveIncidents),d("#performance",n.tabs.performance),d("#strategy",n.tabs.strategy),d("#investigation",n.tabs.investigation),o(),p(),v()});const o=()=>{const l=document.querySelectorAll(".nav-item"),i=document.querySelectorAll(".tab-content");l.forEach(e=>{e.addEventListener("click",t=>{t.preventDefault(),l.forEach(r=>r.classList.remove("active")),e.classList.add("active"),i.forEach(r=>r.classList.remove("active"));const s=e.getAttribute("data-tab"),a=s?document.getElementById(s):null;a&&a.classList.add("active")})})},p=()=>{document.querySelectorAll(".alert-header-row").forEach(i=>{i.addEventListener("click",()=>{const e=i.parentElement;if(!e)return;const t=e.classList.contains("active"),s=i.querySelector(".chevron");t?(e.classList.remove("active"),s&&(s.textContent="▶")):(e.classList.add("active"),s&&(s.textContent="▼"))})})},v=()=>{const l=document.getElementById("analysis-form"),i=document.getElementById("analysis-input"),e=document.getElementById("analysis-spinner"),t=document.getElementById("analysis-output"),s=document.getElementById("analysis-query-bubble");let a;!l||!i||!e||!t||!s||l.addEventListener("submit",r=>{r.preventDefault();const c=i.value.trim();c&&(s.textContent=c,e.classList.remove("hidden"),t.classList.add("hidden"),a&&window.clearTimeout(a),a=window.setTimeout(()=>{e.classList.add("hidden"),t.classList.remove("hidden")},1e3))})};

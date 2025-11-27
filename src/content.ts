@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minoris Dashboard</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" >
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script   src="./assets/index-DJtbBMSe.js"></script>
-  <link rel="stylesheet"  href="./assets/index-BYwDe6X5.css">
-</head>
-
-<body>
-  <div id="app">
-    <aside class="sidebar">
+export const content = {
+  metaTitle: 'Minoris Dashboard',
+  sidebar: `
       <div class="logo-area">
         <img src="./logo.png" alt="Minoris Logo" class="company-logo" />
         <span class="company-name">MINORIS.AI</span>
@@ -33,10 +19,9 @@
           <span class="icon">👥</span> Investigation
         </a>
       </nav>
-  </aside>
-    <main class="main-content">
-      <div class="top-bar"></div>
-      <div id="live-incidents" class="tab-content active">
+  `,
+  tabs: {
+    liveIncidents: `
         <div class="alert-list">
           <div class="alert-item active">
             <div class="alert-header-row">
@@ -314,8 +299,8 @@
             </div>
           </div>
         </div>
-    </div>
-      <div id="performance" class="tab-content">
+    `,
+    performance: `
         <div class="performance-grid">
           <div class="kpi-row">
             <div class="kpi-card">
@@ -554,8 +539,8 @@
             </div>
           </div>
         </div>
-    </div>
-      <div id="strategy" class="tab-content">
+    `,
+    strategy: `
         <div class="strategy-grid">
           <div class="dashboard-card strategy-card">
             <div class="strategy-header">
@@ -600,8 +585,8 @@
             <p>A large share of declines lacks a clear reason code. Other customers improved investigation speed by &gt;50% after adding a simple field indicating which rule or system made the decision.</p>
           </div>
         </div>
-    </div>
-      <div id="investigation" class="tab-content">
+    `,
+    investigation: `
         <div class="investigation-grid">
           <div class="chat-panel">
             <div class="chat-header">
@@ -695,9 +680,6 @@
             </div>
           </div>
         </div>
-    </div>
-    </main>
-  </div>
-</body>
-
-</html>
+    `
+  }
+};
