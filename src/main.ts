@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupNavigation();
   setupAlerts();
   setupInvestigationForm();
+  setupInteractiveCharts();
 });
 
 const setupNavigation = () => {
@@ -88,5 +89,63 @@ const setupInvestigationForm = () => {
       analysisSpinner.classList.add('hidden');
       analysisOutput.classList.remove('hidden');
     }, 1000);
+  });
+};
+
+const setupInteractiveCharts = () => {
+  const charts = document.querySelectorAll<SVGSVGElement>('.chart-interactive');
+  charts.forEach(chart => {
+    const dataAttr = chart.dataset.points;
+    if (!dataAttr) return;
+
+    const cursor = chart.querySelector<SVGCircleElement>('.chart-cursor');
+    const hoverLine = chart.querySelector<SVGLineElement>('.chart-hover-line');
+    const hitArea = chart.querySelector<SVGRectElement>('.chart-hit-area');
+    const output = chart.closest('.chart-container')?.querySelector<HTMLElement>('[data-role="chart-value"]');
+    if (!cursor || !hoverLine || !hitArea) return;
+
+    const defaultText = output?.textContent ?? '';
+    const points = dataAttr.split('|').map(chunk => {
+      const [xStr, yStr, label = '', value = ''] = chunk.split(',');
+      const x = Number(xStr);
+      const y = Number(yStr);
+      return { x, y, label, value };
+    }).filter(point => !Number.isNaN(point.x) && !Number.isNaN(point.y));
+    if (!points.length) return;
+
+    const showPoint = (point: { x: number; y: number; label: string; value: string }) => {
+      cursor.setAttribute('cx', point.x.toString());
+      cursor.setAttribute('cy', point.y.toString());
+      hoverLine.setAttribute('x1', point.x.toString());
+      hoverLine.setAttribute('x2', point.x.toString());
+      hoverLine.setAttribute('y1', '20');
+      hoverLine.setAttribute('y2', '190');
+      if (output) {
+        output.textContent = `${point.label} → ${point.value}`;
+      }
+    };
+
+    const handlePointer = (clientX: number) => {
+      const rect = chart.getBoundingClientRect();
+      const svgX = clientX - rect.left;
+      const nearest = points.reduce((prev, point) => {
+        const prevDiff = Math.abs(prev.x - svgX);
+        const nextDiff = Math.abs(point.x - svgX);
+        return nextDiff < prevDiff ? point : prev;
+      });
+      cursor.classList.remove('hidden');
+      hoverLine.classList.remove('hidden');
+      showPoint(nearest);
+    };
+
+    hitArea.addEventListener('pointerenter', event => handlePointer(event.clientX));
+    hitArea.addEventListener('pointermove', event => handlePointer(event.clientX));
+    chart.addEventListener('pointerleave', () => {
+      cursor.classList.add('hidden');
+      hoverLine.classList.add('hidden');
+      if (output) {
+        output.textContent = defaultText;
+      }
+    });
   });
 };

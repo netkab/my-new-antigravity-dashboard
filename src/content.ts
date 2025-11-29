@@ -36,7 +36,6 @@ export const content = {
             <div class="alert-body">
               <div class="cards-container">
                 <div class="dashboard-card">
-                  <h3 class="card-title">STEP 1: CONTEXTUAL CORRELATION</h3>
                   <div class="chart-container">
                     <div class="chart-annotation">
                       <span class="annotation-icon">@</span> Correlated with "Summer_Referral" Launch
@@ -54,12 +53,10 @@ export const content = {
                     </div>
                   </div>
                   <div class="card-footer">
-                    <span class="clock-icon">🕒</span> Fraud spike aligned perfectly with Promo Code deployment at
-                    14:00.
+                    <span class="clock-icon">🕒</span> Sudden 8× velocity spike in BR registrations.
                   </div>
                 </div>
                 <div class="dashboard-card">
-                  <h3 class="card-title">STEP 2: AGENTIC DIAGNOSIS</h3>
                   <div class="diagnosis-item">
                     <div class="diagnosis-icon-container">
                       <div class="diagnosis-icon"></div>
@@ -96,32 +93,47 @@ export const content = {
               </div>
             </div>
             <div class="alert-body">
-              <div class="dashboard-card">
-                <h3 class="card-title">DETAIL</h3>
-                <ul
-                  style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; padding-left: 1.2rem; margin-bottom: 1.5rem;">
-                  <li>Drop localized to PayPal and Klarna methods.</li>
-                  <li>Latency increased 20% after UI changes.</li>
-                  <li>Fraud rate unchanged, suggesting technical rather than behavioral cause.</li>
-                  <li>Recommend rollback or A/B testing new flow.</li>
-                </ul>
-                <div class="chart-container" style="height: 150px;">
-                  <div class="chart-annotation alert-2-annotation">
-                    <span class="annotation-icon">@</span> Checkout Update
-                    <div class="annotation-arrow"></div>
+              <div class="cards-container">
+                <div class="dashboard-card">
+                  <div class="chart-container" style="height: 150px;">
+                    <div class="chart-annotation alert-2-annotation">
+                      <span class="annotation-icon">@</span> Checkout Update
+                      <div class="annotation-arrow"></div>
+                    </div>
+                    <svg viewBox="0 0 400 100" width="100%" height="100%" preserveAspectRatio="none">
+                      <line x1="0" y1="20" x2="400" y2="20" stroke="#334155" stroke-dasharray="4" />
+                      <line x1="0" y1="50" x2="400" y2="50" stroke="#334155" stroke-dasharray="4" />
+                      <line x1="0" y1="80" x2="400" y2="80" stroke="#334155" stroke-dasharray="4" />
+                      <path d="M0,30 L100,32 L200,30 L250,70 L300,72 L400,70" fill="none" stroke="#3b82f6"
+                        stroke-width="2" />
+                      <circle cx="100" cy="32" r="3" fill="#3b82f6" />
+                      <circle cx="200" cy="30" r="3" fill="#3b82f6" />
+                      <circle cx="250" cy="70" r="3" fill="#f87171" />
+                      <circle cx="300" cy="72" r="3" fill="#3b82f6" />
+                      <circle cx="400" cy="70" r="3" fill="#3b82f6" />
+                    </svg>
                   </div>
-                  <svg viewBox="0 0 400 100" width="100%" height="100%" preserveAspectRatio="none">
-                    <line x1="0" y1="20" x2="400" y2="20" stroke="#334155" stroke-dasharray="4" />
-                    <line x1="0" y1="50" x2="400" y2="50" stroke="#334155" stroke-dasharray="4" />
-                    <line x1="0" y1="80" x2="400" y2="80" stroke="#334155" stroke-dasharray="4" />
-                    <path d="M0,30 L100,32 L200,30 L250,70 L300,72 L400,70" fill="none" stroke="#3b82f6"
-                      stroke-width="2" />
-                    <circle cx="100" cy="32" r="3" fill="#3b82f6" />
-                    <circle cx="200" cy="30" r="3" fill="#3b82f6" />
-                    <circle cx="250" cy="70" r="3" fill="#f87171" />
-                    <circle cx="300" cy="72" r="3" fill="#3b82f6" />
-                    <circle cx="400" cy="70" r="3" fill="#3b82f6" />
-                  </svg>
+                </div>
+                <div class="dashboard-card">
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon"></div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Symptoms observed</h4>
+                      <p>Drop localized to PayPal + Klarna while fraud rate stayed flat, suggesting UI/regression issues.</p>
+                    </div>
+                  </div>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon magic">✨</div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Technical root cause</h4>
+                      <p><span class="code-ref">checkout_flow_v3</span> added an extra verification prompt, spiking latency 20%.</p>
+                      <p class="success-text">🛡️ Rollback &amp; A/B test plan ready; expect 4–5 pts approval recovery.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -138,7 +150,6 @@ export const content = {
             <div class="alert-body">
               <div class="cards-container">
                 <div class="dashboard-card">
-                  <h3 class="card-title">VENDOR STACK SCAN</h3>
                   <p>Spend monitors escalated after the EU low-risk lane started overusing the top-tier vendor. Policy
                     trace shows sandbox tenants still pinned to premium checks.</p>
                   <div class="mini-metric-grid">
@@ -185,7 +196,6 @@ export const content = {
                   </div>
                 </div>
                 <div class="dashboard-card">
-                  <h3 class="card-title">AGENTIC ROUTING PLAN</h3>
                   <div class="diagnosis-item">
                     <div class="diagnosis-icon-container">
                       <div class="diagnosis-icon"></div>
@@ -246,7 +256,6 @@ export const content = {
             <div class="alert-body">
               <div class="cards-container">
                 <div class="dashboard-card">
-                  <h3 class="card-title">SURGE REPLAY</h3>
                   <p>Autonomous monitors detected a 6× spike in checkout bots across sandbox tenants. Session
                     fingerprints and API keys matched the SOC's Ops-Agent stress test plan.</p>
                   <div class="chart-container" style="height: 180px;">
@@ -272,7 +281,6 @@ export const content = {
                   </div>
                 </div>
                 <div class="dashboard-card">
-                  <h3 class="card-title">AGENTIC DETERMINATION</h3>
                   <div class="diagnosis-item">
                     <div class="diagnosis-icon-container">
                       <div class="diagnosis-icon"></div>
@@ -292,6 +300,277 @@ export const content = {
                       <p>Escalation downgraded. Model paused enforcement and tagged traffic as <span
                           class="highlight-text">agent-driven QA</span>.</p>
                       <p class="success-text">🛡️ Guardrails stayed armed; customer flow uninterrupted.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="alert-item">
+            <div class="alert-header-row">
+              <span class="chevron">▶</span>
+              <span class="alert-title">Alert #904: Vendor Signal Dissonance</span>
+              <div class="alert-badges">
+                <span class="badge critical"
+                  style="color: #ff4d4d; background: rgba(255, 77, 77, 0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-left: 10px;">High
+                  Impact</span>
+              </div>
+            </div>
+              <div class="alert-body">
+              <div class="cards-container">
+                <div class="dashboard-card">
+                  <div class="chart-container" style="height: 220px;">
+                    <div class="chart-annotation" style="left: 64%; top: 22%;">
+                      <span class="annotation-icon">@</span> Conflict cluster
+                      <div class="annotation-arrow"></div>
+                    </div>
+                    <svg viewBox="0 0 420 210" width="100%" height="100%" preserveAspectRatio="none"
+                      class="chart-interactive"
+                      data-points="60,146,14:05,Trust 0.62 | Risk 0.18|140,132,14:10,Trust 0.74 | Risk 0.22|220,118,14:15,Trust 0.88 | Risk 0.30|300,104,14:20,Trust 0.94 | Risk 0.72|360,96,14:25,Trust 0.97 | Risk 0.88">
+                      <defs>
+                        <linearGradient id="riskBand904" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" stop-color="rgba(248,113,113,0.16)" />
+                          <stop offset="100%" stop-color="rgba(248,113,113,0.03)" />
+                        </linearGradient>
+                        <linearGradient id="trustBand904" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" stop-color="rgba(52,211,153,0.12)" />
+                          <stop offset="100%" stop-color="rgba(52,211,153,0.02)" />
+                        </linearGradient>
+                      </defs>
+                      <rect x="20" y="18" width="380" height="174" fill="#0f172a" stroke="#1f2937" />
+                      <rect x="220" y="18" width="180" height="174" fill="url(#riskBand904)" />
+                      <rect x="20" y="18" width="200" height="174" fill="url(#trustBand904)" />
+                      <line x1="20" y1="60" x2="400" y2="60" stroke="#1f2937" />
+                      <line x1="20" y1="100" x2="400" y2="100" stroke="#1f2937" />
+                      <line x1="20" y1="140" x2="400" y2="140" stroke="#1f2937" />
+                      <line x1="100" y1="18" x2="100" y2="192" stroke="#1f2937" />
+                      <line x1="220" y1="18" x2="220" y2="192" stroke="#1f2937" />
+                      <line x1="340" y1="18" x2="340" y2="192" stroke="#1f2937" />
+                      <polyline points="60,146 140,132 220,118 300,104 360,96" fill="none"
+                        stroke="#34d399" stroke-width="3" />
+                      <polyline points="60,78 140,72 220,70 300,62 360,58" fill="none" stroke="#f87171"
+                        stroke-width="3" />
+                      <circle cx="220" cy="118" r="5" fill="#34d399" stroke="#0f172a" stroke-width="2" />
+                      <circle cx="220" cy="70" r="5" fill="#f87171" stroke="#0f172a" stroke-width="2" />
+                      <circle cx="360" cy="96" r="5" fill="#34d399" stroke="#0f172a" stroke-width="2" />
+                      <circle cx="360" cy="58" r="5" fill="#f87171" stroke="#0f172a" stroke-width="2" />
+                      <rect x="240" y="36" width="140" height="60" fill="rgba(248,113,113,0.1)" stroke="#f87171"
+                        stroke-dasharray="5 4" />
+                      <text x="310" y="204" fill="#94a3b8" font-size="10">Time →</text>
+                      <circle class="chart-cursor hidden" cx="0" cy="0" r="6"></circle>
+                      <line class="chart-hover-line hidden" x1="0" y1="20" x2="0" y2="190"></line>
+                      <rect class="chart-hit-area" x="0" y="0" width="420" height="210" fill="transparent"></rect>
+                    </svg>
+                  </div>
+                  <div class="card-footer">
+                    <span class="clock-icon">🕒</span> 150+ apps passed IDV but failed behavioral scoring.
+                  </div>
+                </div>
+                <div class="dashboard-card">
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon"></div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Signal Conflict Detected</h4>
+                      <p><span class="code-ref">ID_Verification_Provider</span> returned "Verified" while
+                        <span class="code-ref">Behavioral_Score_API</span> flagged Bot Probability &gt; 90%.</p>
+                    </div>
+                  </div>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon magic">✨</div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Root Cause Analysis</h4>
+                      <p>Synthetic identities pass document checks but input telemetry reveals non-human typing cadences
+                        (0ms keystroke flight time).</p>
+                    </div>
+                  </div>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon magic">✨</div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Automated Action</h4>
+                      <p>Rule <span class="code-ref">resolve_conflict_v2</span> forced active liveness (3D face map) for this cohort.</p>
+                      <p class="success-text">🛡️ 142 synthetic accounts blocked; 8 real users verified via step-up.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="alert-item">
+            <div class="alert-header-row">
+              <span class="chevron">▶</span>
+              <span class="alert-title">Alert #912: Automated Traffic Classification</span>
+              <div class="alert-badges">
+                <span class="badge warning"
+                  style="color: #fbbf24; background: rgba(251, 191, 36, 0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-left: 10px;">Medium
+                  Impact</span>
+              </div>
+            </div>
+              <div class="alert-body">
+              <div class="cards-container">
+                <div class="dashboard-card">
+                  <div class="chart-container" style="height: 190px;">
+                    <div class="chart-annotation" style="left: 58%; top: 20%;">
+                      <span class="annotation-icon">@</span> Traffic reclassified
+                      <div class="annotation-arrow"></div>
+                    </div>
+                    <svg viewBox="0 0 420 170" width="100%" height="100%" preserveAspectRatio="none"
+                      class="chart-interactive"
+                      data-points="40,125,14:00,Blocked 1.1k|120,118,14:05,Blocked 1.4k|200,110,14:10,Blocked 1.9k|260,65,14:15,Reclassified 2.6k|320,82,14:20,Allowed 2.9k|360,102,14:25,Allowed 3.1k|400,118,14:30,Allowed 3.3k">
+                      <defs>
+                        <linearGradient id="trafficBlockArea912" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" stop-color="rgba(248,113,113,0.24)" />
+                          <stop offset="100%" stop-color="rgba(248,113,113,0.05)" />
+                        </linearGradient>
+                        <linearGradient id="trafficAllowArea912" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" stop-color="rgba(52,211,153,0.2)" />
+                          <stop offset="100%" stop-color="rgba(52,211,153,0.04)" />
+                        </linearGradient>
+                      </defs>
+                      <rect x="0" y="0" width="260" height="150" fill="url(#trafficBlockArea912)" />
+                      <rect x="260" y="0" width="160" height="150" fill="url(#trafficAllowArea912)" />
+                      <line x1="0" y1="120" x2="420" y2="120" stroke="#fbbf24" stroke-dasharray="5 5" />
+                      <text x="6" y="115" fill="#fbbf24" font-size="10">Normal threshold</text>
+                      <polyline points="40,125 120,118 200,110 260,65" fill="none" stroke="#f87171" stroke-width="3" />
+                      <polyline points="260,65 320,82 360,102 400,118" fill="none" stroke="#34d399" stroke-width="3" />
+                      <circle cx="200" cy="110" r="5" fill="#f87171" stroke="#0f172a" stroke-width="2" />
+                      <circle cx="260" cy="65" r="6" fill="#34d399" stroke="#0f172a" stroke-width="2" />
+                      <circle cx="360" cy="102" r="5" fill="#34d399" stroke="#0f172a" stroke-width="2" />
+                      <line class="chart-hover-line hidden" x1="0" y1="10" x2="0" y2="150"></line>
+                      <circle class="chart-cursor hidden" cx="0" cy="0" r="6"></circle>
+                      <rect class="chart-hit-area" x="0" y="0" width="420" height="170" fill="transparent"></rect>
+                      <text x="18" y="162" fill="#94a3b8" font-size="10">14:00</text>
+                      <text x="210" y="162" fill="#94a3b8" font-size="10">14:15</text>
+                      <text x="360" y="162" fill="#94a3b8" font-size="10">14:30</text>
+                    </svg>
+                  </div>
+                  <div class="card-footer">
+                    <span class="clock-icon">🕒</span> 500% spike on Checkout API initially flagged as DDoS/Scraping.
+                  </div>
+                </div>
+                <div class="dashboard-card">
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon"></div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Behavioral Analysis</h4>
+                      <p>Velocity exceeded human thresholds (sub-200ms checkout flow) and triggered
+                        <span class="code-ref">WAF_rate_limiter</span>.</p>
+                    </div>
+                  </div>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon magic">✨</div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Agentic Intent Verification</h4>
+                      <p><span class="code-ref">User_Journey_Analyzer</span> confirmed valid tokens and purchase intent
+                        matching "ShopMate AI" signatures.</p>
+                    </div>
+                  </div>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon magic">✨</div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Automated Action</h4>
+                      <p>Traffic re-classified from "Malicious Bot" to "Authorized Agent" and dynamic allow-list applied
+                        for <span class="code-ref">Agent_Session_ID</span> pattern.</p>
+                      <p class="success-text">💎 $12k in legitimate autonomous revenue preserved; zero friction added.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="alert-item">
+            <div class="alert-header-row">
+              <span class="chevron">▶</span>
+              <span class="alert-title">Alert #945: Regional Sign-up Anomaly (Brazil)</span>
+              <div class="alert-badges">
+                <span class="badge info"
+                  style="color: #60a5fa; background: rgba(96, 165, 250, 0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-left: 10px;">Low
+                  Impact</span>
+              </div>
+            </div>
+              <div class="alert-body">
+              <div class="cards-container">
+                <div class="dashboard-card">
+                  <div class="chart-container" style="height: 190px;">
+                    <div class="chart-annotation" style="left: 70%; top: 16%;">
+                      <span class="annotation-icon">@</span> Campaign launch
+                      <div class="annotation-arrow"></div>
+                    </div>
+                    <svg viewBox="0 0 420 170" width="100%" height="100%" preserveAspectRatio="none"
+                      class="chart-interactive"
+                      data-points="30,142,13:00,120 regs|100,134,13:15,210 regs|170,122,13:30,320 regs|230,106,13:45,480 regs|280,88,14:00,750 regs|330,68,14:15,960 regs|370,52,14:30,1100 regs|400,44,14:45,1250 regs">
+                      <defs>
+                        <linearGradient id="signupAreaBR" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" stop-color="rgba(249,115,22,0.32)"></stop>
+                          <stop offset="100%" stop-color="rgba(249,115,22,0.06)"></stop>
+                        </linearGradient>
+                      </defs>
+                      <rect x="20" y="10" width="380" height="150" fill="#0f172a" stroke="#1f2937" />
+                      <line x1="20" y1="130" x2="400" y2="130" stroke="#334155" stroke-dasharray="4 6" />
+                      <line x1="20" y1="100" x2="400" y2="100" stroke="#334155" stroke-dasharray="4 6" />
+                      <line x1="20" y1="70" x2="400" y2="70" stroke="#334155" stroke-dasharray="4 6" />
+                      <line x1="260" y1="10" x2="260" y2="160" stroke="#f59e0b" stroke-dasharray="5 4" />
+                      <text x="266" y="22" fill="#f59e0b" font-size="10">High_Volume_Launch_Mode</text>
+                      <path d="M30,142 L100,134 L170,122 L230,106 L280,88 L330,68 L370,52 L400,44 L400,170 L30,170 Z"
+                        fill="url(#signupAreaBR)" stroke="none" />
+                      <polyline points="30,142 100,134 170,122 230,106 280,88 330,68 370,52 400,44" fill="none"
+                        stroke="#f97316" stroke-width="3" />
+                      <circle cx="230" cy="106" r="5" fill="#f97316" stroke="#0f172a" stroke-width="2" />
+                      <circle cx="330" cy="68" r="5" fill="#f97316" stroke="#0f172a" stroke-width="2" />
+                      <circle cx="400" cy="44" r="5" fill="#f97316" stroke="#0f172a" stroke-width="2" />
+                      <line class="chart-hover-line hidden" x1="0" y1="10" x2="0" y2="160"></line>
+                      <circle class="chart-cursor hidden" cx="0" cy="0" r="6"></circle>
+                      <rect class="chart-hit-area" x="0" y="0" width="420" height="170" fill="transparent"></rect>
+                      <text x="30" y="162" fill="#94a3b8" font-size="10">13:00</text>
+                      <text x="220" y="162" fill="#94a3b8" font-size="10">13:45</text>
+                      <text x="360" y="162" fill="#94a3b8" font-size="10">14:45</text>
+                    </svg>
+                  </div>
+                  <div class="card-footer">
+                    <span class="clock-icon">🕒</span> Fraud spike aligned perfectly with Promo Code deployment at
+                    14:00.
+                  </div>
+                </div>
+                <div class="dashboard-card">
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon"></div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Symptoms Observed</h4>
+                      <p>Geo-velocity thresholds breached; system prepared to engage
+                        <span class="code-ref">Geo_Block_Protocol</span>.</p>
+                    </div>
+                  </div>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon magic">✨</div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Contextual Correlation</h4>
+                      <p>Spike aligned with <span class="code-ref">Marketing_Campaign_LATAM_Influencer</span> launch.</p>
+                    </div>
+                  </div>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon magic">✨</div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Automated Action</h4>
+                      <p>Auto-suppressed block and switched profile to
+                        <span class="code-ref">High_Volume_Launch_Mode</span> (higher tolerance, strict email domain checks).</p>
+                      <p class="success-text">✅ 2,500 new users onboarded without friction.</p>
                     </div>
                   </div>
                 </div>
