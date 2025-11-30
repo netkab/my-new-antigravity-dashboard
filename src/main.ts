@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupAlerts();
   setupInvestigationForm();
   setupInteractiveCharts();
+  setupIncidentActions();
 });
 
 const setupNavigation = () => {
@@ -57,6 +58,89 @@ const setupAlerts = () => {
         item.classList.add('active');
         if (chevron) chevron.textContent = '▼';
       }
+    });
+  });
+};
+
+const setupIncidentActions = () => {
+  const alerts = document.querySelectorAll<HTMLElement>('#live-incidents .alert-body');
+
+  alerts.forEach(alertBody => {
+    if (alertBody.querySelector('.incident-action-stack')) return;
+
+    const actionStack = document.createElement('div');
+    actionStack.className = 'incident-action-stack';
+
+    const actions = document.createElement('div');
+    actions.className = 'incident-actions';
+
+    const acknowledgeButton = document.createElement('button');
+    acknowledgeButton.type = 'button';
+    acknowledgeButton.className = 'incident-btn acknowledge';
+    acknowledgeButton.textContent = 'Acknowledge';
+
+    const dismissButton = document.createElement('button');
+    dismissButton.type = 'button';
+    dismissButton.className = 'incident-btn dismiss';
+    dismissButton.textContent = 'Dismiss';
+
+    actions.appendChild(acknowledgeButton);
+    actions.appendChild(dismissButton);
+
+    const form = document.createElement('form');
+    form.className = 'decision-form hidden';
+    form.dataset.action = 'Acknowledge';
+
+    const decisionLabel = document.createElement('div');
+    decisionLabel.className = 'decision-label';
+    decisionLabel.textContent = 'Add note for Acknowledge';
+
+    const decisionNote = document.createElement('textarea');
+    decisionNote.className = 'decision-note';
+    decisionNote.placeholder = 'Log the context behind this decision...';
+
+    const submitButton = document.createElement('button');
+    submitButton.type = 'submit';
+    submitButton.className = 'submit-btn';
+    submitButton.textContent = 'Submit';
+
+    const status = document.createElement('div');
+    status.className = 'form-status hidden';
+    status.textContent = 'Decision recorded.';
+
+    form.append(decisionLabel, decisionNote, submitButton, status);
+    actionStack.append(actions, form);
+
+    const cardsContainer = alertBody.querySelector('.cards-container');
+    if (cardsContainer) {
+      cardsContainer.insertAdjacentElement('afterend', actionStack);
+    } else {
+      alertBody.appendChild(actionStack);
+    }
+
+    const openForm = (action: 'Acknowledge' | 'Dismiss') => {
+      form.dataset.action = action;
+      decisionLabel.textContent = `Add note for ${action}`;
+      decisionNote.placeholder = action === 'Acknowledge'
+        ? 'What context led to acknowledging this incident?'
+        : 'Why should this be dismissed? Include guardrails.';
+      form.classList.remove('hidden');
+      status.classList.add('hidden');
+      decisionNote.focus();
+    };
+
+    acknowledgeButton.addEventListener('click', () => openForm('Acknowledge'));
+    dismissButton.addEventListener('click', () => openForm('Dismiss'));
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const action = form.dataset.action || 'Acknowledge';
+      const note = decisionNote.value.trim();
+      status.textContent = note
+        ? `${action} logged with note: "${note}"`
+        : `${action} logged.`;
+      status.classList.remove('hidden');
+      decisionNote.value = '';
     });
   });
 };

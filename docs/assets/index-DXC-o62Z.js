@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))r(s);new MutationObserver(s=>{for(const e of s)if(e.type==="childList")for(const n of e.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&r(n)}).observe(document,{childList:!0,subtree:!0});function i(s){const e={};return s.integrity&&(e.integrity=s.integrity),s.referrerPolicy&&(e.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?e.credentials="include":s.crossOrigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function r(s){if(s.ep)return;s.ep=!0;const e=i(s);fetch(s.href,e)}})();const d={metaTitle:"Minoris Dashboard",sidebar:`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))n(s);new MutationObserver(s=>{for(const e of s)if(e.type==="childList")for(const t of e.addedNodes)t.tagName==="LINK"&&t.rel==="modulepreload"&&n(t)}).observe(document,{childList:!0,subtree:!0});function i(s){const e={};return s.integrity&&(e.integrity=s.integrity),s.referrerPolicy&&(e.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?e.credentials="include":s.crossOrigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function n(s){if(s.ep)return;s.ep=!0;const e=i(s);fetch(s.href,e)}})();const y={metaTitle:"Minoris Dashboard",sidebar:`
       <div class="logo-area">
         <img src="./logo.png" alt="Minoris Logo" class="company-logo" />
         <span class="company-name">MINORIS.AI</span>
@@ -81,7 +81,7 @@
           <div class="alert-item">
             <div class="alert-header-row">
               <span class="chevron">▶</span>
-              <span class="alert-title">Drop in approval rate (EU)</span>
+              <span class="alert-title">Alert #811: Drop in approval rate (EU)</span>
               <div class="alert-badges">
                 <span class="badge warning"
                   style="color: #fbbf24; background: rgba(251, 191, 36, 0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-left: 10px;">Medium
@@ -128,112 +128,6 @@
                       <h4>Technical root cause</h4>
                       <p><span class="code-ref">checkout_flow_v3</span> added an extra verification prompt, spiking latency 20%.</p>
                       <p class="success-text">🛡️ Rollback &amp; A/B test plan ready; expect 4–5 pts approval recovery.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="alert-item">
-            <div class="alert-header-row">
-              <span class="chevron">▶</span>
-              <span class="alert-title">Alert #804: Vendor Optimization</span>
-              <div class="alert-badges">
-                <span class="badge info"
-                  style="color: #60a5fa; background: rgba(96, 165, 250, 0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-left: 10px;">Optimization</span>
-              </div>
-            </div>
-            <div class="alert-body">
-              <div class="cards-container">
-                <div class="dashboard-card">
-                  <p>Spend monitors escalated after the EU low-risk lane started overusing the top-tier vendor. Policy
-                    trace shows sandbox tenants still pinned to premium checks.</p>
-                  <div class="mini-metric-grid">
-                    <div class="mini-metric">
-                      <span class="label">Daily spend</span>
-                      <span class="value">$82K</span>
-                      <span class="change negative">+18%</span>
-                    </div>
-                    <div class="mini-metric">
-                      <span class="label">Redundant calls</span>
-                      <span class="value">41%</span>
-                      <span class="change negative">▲ 11 pts</span>
-                    </div>
-                    <div class="mini-metric">
-                      <span class="label">Risk score impact</span>
-                      <span class="value">+0.2%</span>
-                      <span class="change neutral">flat</span>
-                    </div>
-                  </div>
-                  <div class="chart-container" style="height: 180px;">
-                    <div class="chart-annotation" style="left: 60%; top: 28%;">
-                      <span class="annotation-icon">@</span> Switchback test
-                      <div class="annotation-arrow"></div>
-                    </div>
-                    <svg viewBox="0 0 420 150" width="100%" height="100%" preserveAspectRatio="none">
-                      <line x1="0" y1="30" x2="420" y2="30" stroke="#334155" stroke-dasharray="4" />
-                      <line x1="0" y1="70" x2="420" y2="70" stroke="#334155" stroke-dasharray="4" />
-                      <line x1="0" y1="110" x2="420" y2="110" stroke="#334155" stroke-dasharray="4" />
-                      <rect x="20" y="60" width="60" height="70" fill="#60a5fa" rx="6" />
-                      <rect x="120" y="35" width="60" height="95" fill="#34d399" rx="6" />
-                      <rect x="220" y="20" width="60" height="110" fill="#f97316" rx="6" />
-                      <rect x="320" y="65" width="60" height="65" fill="#a78bfa" rx="6" />
-                      <path d="M0,50 L420,50" stroke="#facc15" stroke-dasharray="5 5" stroke-width="2" />
-                      <text x="5" y="45" fill="#facc15" font-size="10">Budget guardrail</text>
-                      <text x="30" y="140" fill="#94a3b8" font-size="10">Zephyr</text>
-                      <text x="125" y="140" fill="#94a3b8" font-size="10">Halo</text>
-                      <text x="232" y="140" fill="#94a3b8" font-size="10">Sentinel</text>
-                      <text x="330" y="140" fill="#94a3b8" font-size="10">Mercury</text>
-                    </svg>
-                  </div>
-                  <div class="card-footer">
-                    <span class="clock-icon">🕒</span> Ops routed 68% of sandbox checks through Sentinel in the last 30
-                    minutes.
-                  </div>
-                </div>
-                <div class="dashboard-card">
-                  <div class="diagnosis-item">
-                    <div class="diagnosis-icon-container">
-                      <div class="diagnosis-icon"></div>
-                    </div>
-                    <div class="diagnosis-content">
-                      <h4>Policy rewrite</h4>
-                      <p>Updated <span class="code-ref">vendor_router.yaml</span> to weight low-risk cohorts toward
-                        Zephyr/Halo mix and reserve Sentinel for step-up flows.</p>
-                    </div>
-                  </div>
-                  <div class="diagnosis-item">
-                    <div class="diagnosis-icon-container">
-                      <div class="diagnosis-icon magic">✨</div>
-                    </div>
-                    <div class="diagnosis-content">
-                      <h4>Automation outcome</h4>
-                      <p>Agent approved new policy, replayed 5k historical decisions, and published guardrails to the
-                        orchestrator.</p>
-                      <p class="success-text">🛡️ Forecasted savings: $24K / day without impact to fraud posture.</p>
-                    </div>
-                  </div>
-                  <div class="vendor-route-timeline">
-                    <div class="route-step">
-                      <span class="step-dot"></span>
-                      <div>
-                        <strong>T+0 mitigation</strong>
-                        <p>Throttle Sentinel usage on sandbox tenant IDs 223-231 (already live).</p>
-                      </div>
-                    </div>
-                    <div class="route-step">
-                      <span class="step-dot warning"></span>
-                      <div>
-                        <strong>Rolling switchback</strong>
-                        <p>50/50 split to verify latency and approval deltas across Zephyr vs Halo lanes.</p>
-                      </div>
-                    </div>
-                    <div class="route-step">
-                      <span class="step-dot success"></span>
-                      <div>
-                        <strong>Final hardening</strong>
-                        <p>Retrofit policy into production once variance &lt; 1.5% for 6 hrs.</p>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -952,4 +846,4 @@
             </div>
           </div>
         </div>
-    `}},c=(l,a)=>{const i=document.querySelector(l);i&&(i.innerHTML=a.trim())};document.addEventListener("DOMContentLoaded",()=>{document.title=d.metaTitle,c(".sidebar",d.sidebar),c("#live-incidents",d.tabs.liveIncidents),c("#performance",d.tabs.performance),c("#strategy",d.tabs.strategy),c("#investigation",d.tabs.investigation),b(),m(),w(),L()});const b=()=>{const l=document.querySelectorAll(".nav-item"),a=document.querySelectorAll(".tab-content");l.forEach(i=>{i.addEventListener("click",r=>{r.preventDefault(),l.forEach(n=>n.classList.remove("active")),i.classList.add("active"),a.forEach(n=>n.classList.remove("active"));const s=i.getAttribute("data-tab"),e=s?document.getElementById(s):null;e&&e.classList.add("active")})})},m=()=>{document.querySelectorAll(".alert-header-row").forEach(a=>{a.addEventListener("click",()=>{const i=a.parentElement;if(!i)return;const r=i.classList.contains("active"),s=a.querySelector(".chevron");r?(i.classList.remove("active"),s&&(s.textContent="▶")):(i.classList.add("active"),s&&(s.textContent="▼"))})})},w=()=>{const l=document.getElementById("analysis-form"),a=document.getElementById("analysis-input"),i=document.getElementById("analysis-spinner"),r=document.getElementById("analysis-output"),s=document.getElementById("analysis-query-bubble");let e;!l||!a||!i||!r||!s||l.addEventListener("submit",n=>{n.preventDefault();const o=a.value.trim();o&&(s.textContent=o,i.classList.remove("hidden"),r.classList.add("hidden"),e&&window.clearTimeout(e),e=window.setTimeout(()=>{i.classList.add("hidden"),r.classList.remove("hidden")},1e3))})},L=()=>{document.querySelectorAll(".chart-interactive").forEach(a=>{const i=a.dataset.points;if(!i)return;const r=a.querySelector(".chart-cursor"),s=a.querySelector(".chart-hover-line"),e=a.querySelector(".chart-hit-area"),n=a.closest(".chart-container")?.querySelector('[data-role="chart-value"]');if(!r||!s||!e)return;const o=n?.textContent??"",x=i.split("|").map(t=>{const[f,v,g="",p=""]=t.split(","),h=Number(f),y=Number(v);return{x:h,y,label:g,value:p}}).filter(t=>!Number.isNaN(t.x)&&!Number.isNaN(t.y));if(!x.length)return;const k=t=>{r.setAttribute("cx",t.x.toString()),r.setAttribute("cy",t.y.toString()),s.setAttribute("x1",t.x.toString()),s.setAttribute("x2",t.x.toString()),s.setAttribute("y1","20"),s.setAttribute("y2","190"),n&&(n.textContent=`${t.label} → ${t.value}`)},u=t=>{const f=a.getBoundingClientRect(),v=t-f.left,g=x.reduce((p,h)=>{const y=Math.abs(p.x-v);return Math.abs(h.x-v)<y?h:p});r.classList.remove("hidden"),s.classList.remove("hidden"),k(g)};e.addEventListener("pointerenter",t=>u(t.clientX)),e.addEventListener("pointermove",t=>u(t.clientX)),a.addEventListener("pointerleave",()=>{r.classList.add("hidden"),s.classList.add("hidden"),n&&(n.textContent=o)})})};
+    `}},x=(d,a)=>{const i=document.querySelector(d);i&&(i.innerHTML=a.trim())};document.addEventListener("DOMContentLoaded",()=>{document.title=y.metaTitle,x(".sidebar",y.sidebar),x("#live-incidents",y.tabs.liveIncidents),x("#performance",y.tabs.performance),x("#strategy",y.tabs.strategy),x("#investigation",y.tabs.investigation),k(),b(),w(),A(),L()});const k=()=>{const d=document.querySelectorAll(".nav-item"),a=document.querySelectorAll(".tab-content");d.forEach(i=>{i.addEventListener("click",n=>{n.preventDefault(),d.forEach(t=>t.classList.remove("active")),i.classList.add("active"),a.forEach(t=>t.classList.remove("active"));const s=i.getAttribute("data-tab"),e=s?document.getElementById(s):null;e&&e.classList.add("active")})})},b=()=>{document.querySelectorAll(".alert-header-row").forEach(a=>{a.addEventListener("click",()=>{const i=a.parentElement;if(!i)return;const n=i.classList.contains("active"),s=a.querySelector(".chevron");n?(i.classList.remove("active"),s&&(s.textContent="▶")):(i.classList.add("active"),s&&(s.textContent="▼"))})})},L=()=>{document.querySelectorAll("#live-incidents .alert-body").forEach(a=>{if(a.querySelector(".incident-action-stack"))return;const i=document.createElement("div");i.className="incident-action-stack";const n=document.createElement("div");n.className="incident-actions";const s=document.createElement("button");s.type="button",s.className="incident-btn acknowledge",s.textContent="Acknowledge";const e=document.createElement("button");e.type="button",e.className="incident-btn dismiss",e.textContent="Dismiss",n.appendChild(s),n.appendChild(e);const t=document.createElement("form");t.className="decision-form hidden",t.dataset.action="Acknowledge";const o=document.createElement("div");o.className="decision-label",o.textContent="Add note for Acknowledge";const c=document.createElement("textarea");c.className="decision-note",c.placeholder="Log the context behind this decision...";const h=document.createElement("button");h.type="submit",h.className="submit-btn",h.textContent="Submit";const v=document.createElement("div");v.className="form-status hidden",v.textContent="Decision recorded.",t.append(o,c,h,v),i.append(n,t);const r=a.querySelector(".cards-container");r?r.insertAdjacentElement("afterend",i):a.appendChild(i);const f=l=>{t.dataset.action=l,o.textContent=`Add note for ${l}`,c.placeholder=l==="Acknowledge"?"What context led to acknowledging this incident?":"Why should this be dismissed? Include guardrails.",t.classList.remove("hidden"),v.classList.add("hidden"),c.focus()};s.addEventListener("click",()=>f("Acknowledge")),e.addEventListener("click",()=>f("Dismiss")),t.addEventListener("submit",l=>{l.preventDefault();const g=t.dataset.action||"Acknowledge",p=c.value.trim();v.textContent=p?`${g} logged with note: "${p}"`:`${g} logged.`,v.classList.remove("hidden"),c.value=""})})},w=()=>{const d=document.getElementById("analysis-form"),a=document.getElementById("analysis-input"),i=document.getElementById("analysis-spinner"),n=document.getElementById("analysis-output"),s=document.getElementById("analysis-query-bubble");let e;!d||!a||!i||!n||!s||d.addEventListener("submit",t=>{t.preventDefault();const o=a.value.trim();o&&(s.textContent=o,i.classList.remove("hidden"),n.classList.add("hidden"),e&&window.clearTimeout(e),e=window.setTimeout(()=>{i.classList.add("hidden"),n.classList.remove("hidden")},1e3))})},A=()=>{document.querySelectorAll(".chart-interactive").forEach(a=>{const i=a.dataset.points;if(!i)return;const n=a.querySelector(".chart-cursor"),s=a.querySelector(".chart-hover-line"),e=a.querySelector(".chart-hit-area"),t=a.closest(".chart-container")?.querySelector('[data-role="chart-value"]');if(!n||!s||!e)return;const o=t?.textContent??"",c=i.split("|").map(r=>{const[f,l,g="",p=""]=r.split(","),u=Number(f),m=Number(l);return{x:u,y:m,label:g,value:p}}).filter(r=>!Number.isNaN(r.x)&&!Number.isNaN(r.y));if(!c.length)return;const h=r=>{n.setAttribute("cx",r.x.toString()),n.setAttribute("cy",r.y.toString()),s.setAttribute("x1",r.x.toString()),s.setAttribute("x2",r.x.toString()),s.setAttribute("y1","20"),s.setAttribute("y2","190"),t&&(t.textContent=`${r.label} → ${r.value}`)},v=r=>{const f=a.getBoundingClientRect(),l=r-f.left,g=c.reduce((p,u)=>{const m=Math.abs(p.x-l);return Math.abs(u.x-l)<m?u:p});n.classList.remove("hidden"),s.classList.remove("hidden"),h(g)};e.addEventListener("pointerenter",r=>v(r.clientX)),e.addEventListener("pointermove",r=>v(r.clientX)),a.addEventListener("pointerleave",()=>{n.classList.add("hidden"),s.classList.add("hidden"),t&&(t.textContent=o)})})};
