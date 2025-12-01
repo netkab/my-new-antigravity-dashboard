@@ -81,124 +81,6 @@
           <div class="alert-item">
             <div class="alert-header-row">
               <span class="chevron">▶</span>
-              <span class="alert-title">Alert #811: Drop in approval rate (EU)</span>
-              <div class="alert-badges">
-                <span class="badge warning"
-                  style="color: #fbbf24; background: rgba(251, 191, 36, 0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-left: 10px;">Medium
-                  Impact</span>
-              </div>
-            </div>
-            <div class="alert-body">
-              <div class="cards-container">
-                <div class="dashboard-card">
-                  <div class="chart-container" style="height: 150px;">
-                    <div class="chart-annotation alert-2-annotation">
-                      <span class="annotation-icon">@</span> Checkout Update
-                      <div class="annotation-arrow"></div>
-                    </div>
-                    <svg viewBox="0 0 400 100" width="100%" height="100%" preserveAspectRatio="none">
-                      <line x1="0" y1="20" x2="400" y2="20" stroke="#334155" stroke-dasharray="4" />
-                      <line x1="0" y1="50" x2="400" y2="50" stroke="#334155" stroke-dasharray="4" />
-                      <line x1="0" y1="80" x2="400" y2="80" stroke="#334155" stroke-dasharray="4" />
-                      <path d="M0,30 L100,32 L200,30 L250,70 L300,72 L400,70" fill="none" stroke="#3b82f6"
-                        stroke-width="2" />
-                      <circle cx="100" cy="32" r="3" fill="#3b82f6" />
-                      <circle cx="200" cy="30" r="3" fill="#3b82f6" />
-                      <circle cx="250" cy="70" r="3" fill="#f87171" />
-                      <circle cx="300" cy="72" r="3" fill="#3b82f6" />
-                      <circle cx="400" cy="70" r="3" fill="#3b82f6" />
-                    </svg>
-                  </div>
-                </div>
-                <div class="dashboard-card">
-                  <div class="diagnosis-item">
-                    <div class="diagnosis-icon-container">
-                      <div class="diagnosis-icon"></div>
-                    </div>
-                    <div class="diagnosis-content">
-                      <h4>Symptoms observed</h4>
-                      <p>Drop localized to PayPal + Klarna while fraud rate stayed flat, suggesting UI/regression issues.</p>
-                    </div>
-                  </div>
-                  <div class="diagnosis-item">
-                    <div class="diagnosis-icon-container">
-                      <div class="diagnosis-icon magic">✨</div>
-                    </div>
-                    <div class="diagnosis-content">
-                      <h4>Technical root cause</h4>
-                      <p><span class="code-ref">checkout_flow_v3</span> added an extra verification prompt, spiking latency 20%.</p>
-                      <p class="success-text">🛡️ Rollback &amp; A/B test plan ready; expect 4–5 pts approval recovery.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="alert-item">
-            <div class="alert-header-row">
-              <span class="chevron">▶</span>
-              <span class="alert-title">Alert #818: Bot Activity Verified as Safe</span>
-              <div class="alert-badges">
-                <span class="badge success"
-                  style="color: #4ade80; background: rgba(74, 222, 128, 0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-left: 10px;">Greenlit</span>
-              </div>
-            </div>
-            <div class="alert-body">
-              <div class="cards-container">
-                <div class="dashboard-card">
-                  <p>Autonomous monitors detected a 6× spike in checkout bots across sandbox tenants. Session
-                    fingerprints and API keys matched the SOC's Ops-Agent stress test plan.</p>
-                  <div class="chart-container" style="height: 180px;">
-                    <div class="chart-annotation" style="left: 70%; top: 25%;">
-                      <span class="annotation-icon">@</span> Agent playback verified
-                      <div class="annotation-arrow"></div>
-                    </div>
-                    <svg viewBox="0 0 400 140" width="100%" height="100%" preserveAspectRatio="none">
-                      <line x1="0" y1="30" x2="400" y2="30" stroke="#334155" stroke-dasharray="4" />
-                      <line x1="0" y1="70" x2="400" y2="70" stroke="#334155" stroke-dasharray="4" />
-                      <line x1="0" y1="110" x2="400" y2="110" stroke="#334155" stroke-dasharray="4" />
-                      <path d="M0,105 L60,95 L120,90 L180,85 L220,35 L300,40 L360,45 L400,42" fill="none"
-                        stroke="#f87171" stroke-width="2" />
-                      <circle cx="220" cy="35" r="5" fill="#f87171" />
-                      <circle cx="360" cy="45" r="4" fill="#f87171" />
-                      <path d="M0,95 L400,95" fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="6 4" />
-                      <path d="M0,120 L100,115 L160,100 L220,60 L280,55 L340,52 L400,50" fill="none"
-                        stroke="#34d399" stroke-width="2" />
-                    </svg>
-                  </div>
-                  <div class="card-footer">
-                    <span class="clock-icon">🕒</span> SOC confirmed replay began 14:35 UTC with Ops-Agent-24 scripts.
-                  </div>
-                </div>
-                <div class="dashboard-card">
-                  <div class="diagnosis-item">
-                    <div class="diagnosis-icon-container">
-                      <div class="diagnosis-icon"></div>
-                    </div>
-                    <div class="diagnosis-content">
-                      <h4>Signals Cross-Checked</h4>
-                      <p>Botnet telemetry correlated with <span class="code-ref">agent_lab.yaml</span> signatures and
-                        whitelisted CIDR ranges.</p>
-                    </div>
-                  </div>
-                  <div class="diagnosis-item">
-                    <div class="diagnosis-icon-container">
-                      <div class="diagnosis-icon magic">✨</div>
-                    </div>
-                    <div class="diagnosis-content">
-                      <h4>Outcome</h4>
-                      <p>Escalation downgraded. Model paused enforcement and tagged traffic as <span
-                          class="highlight-text">agent-driven QA</span>.</p>
-                      <p class="success-text">🛡️ Guardrails stayed armed; customer flow uninterrupted.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="alert-item">
-            <div class="alert-header-row">
-              <span class="chevron">▶</span>
               <span class="alert-title">Alert #904: Vendor Signal Dissonance</span>
               <div class="alert-badges">
                 <span class="badge critical"
@@ -206,7 +88,7 @@
                   Impact</span>
               </div>
             </div>
-              <div class="alert-body">
+            <div class="alert-body">
               <div class="cards-container">
                 <div class="dashboard-card">
                   <div class="chart-container" style="height: 220px;">
@@ -294,6 +176,62 @@
           <div class="alert-item">
             <div class="alert-header-row">
               <span class="chevron">▶</span>
+              <span class="alert-title">Alert #811: Drop in approval rate (EU)</span>
+              <div class="alert-badges">
+                <span class="badge warning"
+                  style="color: #fbbf24; background: rgba(251, 191, 36, 0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-left: 10px;">Medium
+                  Impact</span>
+              </div>
+            </div>
+            <div class="alert-body">
+              <div class="cards-container">
+                <div class="dashboard-card">
+                  <div class="chart-container" style="height: 150px;">
+                    <div class="chart-annotation alert-2-annotation">
+                      <span class="annotation-icon">@</span> Checkout Update
+                      <div class="annotation-arrow"></div>
+                    </div>
+                    <svg viewBox="0 0 400 100" width="100%" height="100%" preserveAspectRatio="none">
+                      <line x1="0" y1="20" x2="400" y2="20" stroke="#334155" stroke-dasharray="4" />
+                      <line x1="0" y1="50" x2="400" y2="50" stroke="#334155" stroke-dasharray="4" />
+                      <line x1="0" y1="80" x2="400" y2="80" stroke="#334155" stroke-dasharray="4" />
+                      <path d="M0,30 L100,32 L200,30 L250,70 L300,72 L400,70" fill="none" stroke="#3b82f6"
+                        stroke-width="2" />
+                      <circle cx="100" cy="32" r="3" fill="#3b82f6" />
+                      <circle cx="200" cy="30" r="3" fill="#3b82f6" />
+                      <circle cx="250" cy="70" r="3" fill="#f87171" />
+                      <circle cx="300" cy="72" r="3" fill="#3b82f6" />
+                      <circle cx="400" cy="70" r="3" fill="#3b82f6" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="dashboard-card">
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon"></div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Symptoms observed</h4>
+                      <p>Drop localized to PayPal + Klarna while fraud rate stayed flat, suggesting UI/regression issues.</p>
+                    </div>
+                  </div>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon magic">✨</div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Technical root cause</h4>
+                      <p><span class="code-ref">checkout_flow_v3</span> added an extra verification prompt, spiking latency 20%.</p>
+                      <p class="success-text">🛡️ Rollback &amp; A/B test plan ready; expect 4–5 pts approval recovery.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="alert-item">
+            <div class="alert-header-row">
+              <span class="chevron">▶</span>
               <span class="alert-title">Alert #912: Automated Traffic Classification</span>
               <div class="alert-badges">
                 <span class="badge warning"
@@ -301,7 +239,7 @@
                   Impact</span>
               </div>
             </div>
-              <div class="alert-body">
+            <div class="alert-body">
               <div class="cards-container">
                 <div class="dashboard-card">
                   <div class="chart-container" style="height: 190px;">
@@ -389,7 +327,7 @@
                   Impact</span>
               </div>
             </div>
-              <div class="alert-body">
+            <div class="alert-body">
               <div class="cards-container">
                 <div class="dashboard-card">
                   <div class="chart-container" style="height: 190px;">
@@ -461,6 +399,68 @@
                       <p>Auto-suppressed block and switched profile to
                         <span class="code-ref">High_Volume_Launch_Mode</span> (higher tolerance, strict email domain checks).</p>
                       <p class="success-text">✅ 2,500 new users onboarded without friction.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="alert-item">
+            <div class="alert-header-row">
+              <span class="chevron">▶</span>
+              <span class="alert-title">Alert #818: Bot Activity Verified as Safe</span>
+              <div class="alert-badges">
+                <span class="badge success"
+                  style="color: #4ade80; background: rgba(74, 222, 128, 0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-left: 10px;">Greenlit</span>
+              </div>
+            </div>
+            <div class="alert-body">
+              <div class="cards-container">
+                <div class="dashboard-card">
+                  <p>Autonomous monitors detected a 6× spike in checkout bots across sandbox tenants. Session
+                    fingerprints and API keys matched the SOC's Ops-Agent stress test plan.</p>
+                  <div class="chart-container" style="height: 180px;">
+                    <div class="chart-annotation" style="left: 70%; top: 25%;">
+                      <span class="annotation-icon">@</span> Agent playback verified
+                      <div class="annotation-arrow"></div>
+                    </div>
+                    <svg viewBox="0 0 400 140" width="100%" height="100%" preserveAspectRatio="none">
+                      <line x1="0" y1="30" x2="400" y2="30" stroke="#334155" stroke-dasharray="4" />
+                      <line x1="0" y1="70" x2="400" y2="70" stroke="#334155" stroke-dasharray="4" />
+                      <line x1="0" y1="110" x2="400" y2="110" stroke="#334155" stroke-dasharray="4" />
+                      <path d="M0,105 L60,95 L120,90 L180,85 L220,35 L300,40 L360,45 L400,42" fill="none"
+                        stroke="#f87171" stroke-width="2" />
+                      <circle cx="220" cy="35" r="5" fill="#f87171" />
+                      <circle cx="360" cy="45" r="4" fill="#f87171" />
+                      <path d="M0,95 L400,95" fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="6 4" />
+                      <path d="M0,120 L100,115 L160,100 L220,60 L280,55 L340,52 L400,50" fill="none"
+                        stroke="#34d399" stroke-width="2" />
+                    </svg>
+                  </div>
+                  <div class="card-footer">
+                    <span class="clock-icon">🕒</span> SOC confirmed replay began 14:35 UTC with Ops-Agent-24 scripts.
+                  </div>
+                </div>
+                <div class="dashboard-card">
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon"></div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Signals Cross-Checked</h4>
+                      <p>Botnet telemetry correlated with <span class="code-ref">agent_lab.yaml</span> signatures and
+                        whitelisted CIDR ranges.</p>
+                    </div>
+                  </div>
+                  <div class="diagnosis-item">
+                    <div class="diagnosis-icon-container">
+                      <div class="diagnosis-icon magic">✨</div>
+                    </div>
+                    <div class="diagnosis-content">
+                      <h4>Outcome</h4>
+                      <p>Escalation downgraded. Model paused enforcement and tagged traffic as <span
+                          class="highlight-text">agent-driven QA</span>.</p>
+                      <p class="success-text">🛡️ Guardrails stayed armed; customer flow uninterrupted.</p>
                     </div>
                   </div>
                 </div>
@@ -757,14 +757,14 @@
           <div class="chat-panel">
             <div class="chat-header">
               <h3>Investigation Copilot</h3>
-              <p>Ask ad-hoc questions and let Minoris correlate telemetry, policies, and vendor data.</p>
+              <p>Investigate specific segments, trends or KPIs</p>
             </div>
             <div class="chat-window">
               <div class="chat-message user" id="analysis-query-bubble">
                 why did the approval rate in LATAM dropped last week?
               </div>
               <div class="chat-message bot">
-                I’ll correlate regional approvals, vendor routing, and promo signals for you.
+                I’ll analyze the root cause across the entire system
               </div>
               <div class="chat-hint">Use natural language prompts to investigate incidents on demand.</div>
             </div>
