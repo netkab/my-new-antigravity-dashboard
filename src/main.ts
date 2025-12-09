@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setInnerHTML('.sidebar', content.sidebar);
   setInnerHTML('#live-incidents', content.tabs.liveIncidents);
-  setInnerHTML('#performance', content.tabs.performance);
+  setInnerHTML('#advanced-analytics', content.tabs.advancedAnalytics);
   setInnerHTML('#strategy', content.tabs.strategy);
   setInnerHTML('#investigation', content.tabs.investigation);
 

@@ -9,8 +9,8 @@ export const content = {
         <a href="#" class="nav-item active" data-tab="live-incidents">
           <span class="icon">⚡</span> Live Incidents
         </a>
-        <a href="#" class="nav-item" data-tab="performance">
-          <span class="icon">📈</span> Performance
+        <a href="#" class="nav-item" data-tab="advanced-analytics">
+          <span class="icon">🛡️</span> Fraud Posture
         </a>
         <a href="#" class="nav-item" data-tab="strategy">
           <span class="icon">🎯</span> Strategy
@@ -473,242 +473,305 @@ export const content = {
           </div>
         </div>
     `,
-    performance: `
-        <div class="performance-grid">
-          <div class="kpi-row">
-            <div class="kpi-card">
-              <div class="kpi-title">Approval Rate</div>
-              <div class="kpi-value-row">
-                <span class="kpi-value">96%</span>
-                <span class="kpi-badge success">+1.2%</span>
+    advancedAnalytics: `
+        <div class="advanced-analytics">
+          <div class="aa-header">
+            <div>
+              <div class="aa-eyebrow">Agent Insights</div>
+              <h2 class="aa-title">Fraud Posture</h2>
+              <p class="aa-subtitle">Deep dive into risk posture, projected fraud, and automation quality.</p>
+            </div>
+            <div class="aa-actions">
+              <span class="aa-chip muted">Nov 1 - Nov 30</span>
+              <button class="aa-chip">Filters</button>
+            </div>
+          </div>
+
+          <div class="aa-kpi-grid">
+            <div class="aa-kpi-card">
+              <div class="aa-kpi-label-row">
+                <div class="aa-kpi-label">Transaction Volume</div>
+                <div class="aa-tooltip" aria-label="Transaction Volume tooltip">
+                  <span class="aa-tooltip-trigger">i</span>
+                  <div class="aa-tooltip-bubble">Total value of processed transactions. Projection blends seasonality and recent daily velocity.</div>
+                </div>
+              </div>
+              <div class="aa-kpi-value-row">
+                <span class="aa-kpi-value">$2.45M</span>
+                <span class="aa-trend up">+12.5%</span>
+              </div>
+              <p class="aa-kpi-sub">Projected to close at $2.61M</p>
+            </div>
+            <div class="aa-kpi-card">
+              <div class="aa-kpi-label-row">
+                <div class="aa-kpi-label">Fraud Resiliency Score</div>
+                <div class="aa-tooltip" aria-label="Fraud Resiliency tooltip">
+                  <span class="aa-tooltip-trigger">i</span>
+                  <div class="aa-tooltip-bubble">Composite of chargeback trend, model precision/recall, and rule coverage; 100 = strongest posture.</div>
+                </div>
+              </div>
+              <div class="aa-kpi-value-row">
+                <span class="aa-kpi-value">94 / 100</span>
+                <span class="aa-trend up">+2.1%</span>
+              </div>
+              <p class="aa-kpi-sub">Composite risk posture</p>
+            </div>
+            <div class="aa-kpi-card">
+              <div class="aa-kpi-label-row">
+                <div class="aa-kpi-label">False Positive Rate</div>
+                <div class="aa-tooltip" aria-label="False Positive tooltip">
+                  <span class="aa-tooltip-trigger">i</span>
+                  <div class="aa-tooltip-bubble">Share of good users declined and later cleared by step-up or manual review. Lower keeps revenue intact.</div>
+                </div>
+              </div>
+              <div class="aa-kpi-value-row">
+                <span class="aa-kpi-value accent">0.38%</span>
+                <span class="aa-trend down">-0.05%</span>
+              </div>
+              <p class="aa-kpi-sub">Est. 125 good users saved</p>
+            </div>
+            <div class="aa-kpi-card">
+              <div class="aa-kpi-label-row">
+                <div class="aa-kpi-label">Agent Autonomy Score</div>
+                <div class="aa-tooltip" aria-label="Agent Autonomy tooltip">
+                  <span class="aa-tooltip-trigger">i</span>
+                  <div class="aa-tooltip-bubble">Percent of decisions resolved without human review. High autonomy keeps latency down and teams focused.</div>
+                </div>
+              </div>
+              <div class="aa-kpi-value-row">
+                <span class="aa-kpi-value">98.2%</span>
+                <span class="aa-trend up">+0.8%</span>
+              </div>
+              <p class="aa-kpi-sub">Decisions without manual review</p>
+            </div>
+          </div>
+
+          <div class="aa-main-grid">
+            <div class="aa-panel">
+              <div class="aa-panel-head">
+                <div>
+                  <div class="aa-panel-title">Transaction Volume</div>
+                  <p class="aa-panel-sub">Actuals vs projection</p>
+                </div>
+                <span class="aa-tag">Live</span>
+              </div>
+              <div class="aa-chart large">
+                <svg viewBox="0 0 560 240" role="img" aria-label="Transaction volume and projection">
+                  <defs>
+                    <linearGradient id="aaVolumeBg" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#0f172a" />
+                      <stop offset="100%" stop-color="#0b1118" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="0" y="0" width="560" height="240" fill="url(#aaVolumeBg)" stroke="#1f2937" />
+                  <g stroke="#1f2937" stroke-width="1" stroke-dasharray="4 4">
+                    <line x1="50" y1="50" x2="520" y2="50" />
+                    <line x1="50" y1="100" x2="520" y2="100" />
+                    <line x1="50" y1="150" x2="520" y2="150" />
+                    <line x1="50" y1="200" x2="520" y2="200" />
+                  </g>
+                  <g>
+                    <rect x="60" y="70" width="40" height="130" rx="6" fill="#3b82f6" />
+                    <rect x="140" y="50" width="40" height="150" rx="6" fill="#3b82f6" />
+                    <rect x="220" y="42" width="40" height="158" rx="6" fill="#3b82f6" />
+                    <rect x="300" y="60" width="40" height="140" rx="6" fill="#3b82f6" />
+                    <rect x="380" y="28" width="40" height="172" rx="6" fill="#3b82f6" />
+                  </g>
+                  <polyline points="80,82 160,60 240,54 320,70 400,46" fill="none" stroke="#a78bfa" stroke-width="3" stroke-dasharray="5 4" />
+                  <circle cx="80" cy="82" r="4" fill="#a78bfa" />
+                  <circle cx="160" cy="60" r="4" fill="#a78bfa" />
+                  <circle cx="240" cy="54" r="4" fill="#a78bfa" />
+                  <circle cx="320" cy="70" r="4" fill="#a78bfa" />
+                  <circle cx="400" cy="46" r="4" fill="#a78bfa" />
+                  <text x="60" y="225" fill="#94a3b8" font-size="11">Nov 1</text>
+                  <text x="140" y="225" fill="#94a3b8" font-size="11">Nov 8</text>
+                  <text x="220" y="225" fill="#94a3b8" font-size="11">Nov 15</text>
+                  <text x="300" y="225" fill="#94a3b8" font-size="11">Nov 22</text>
+                  <text x="380" y="225" fill="#94a3b8" font-size="11">Nov 29</text>
+                  <text x="430" y="75" fill="#3b82f6" font-size="11">Actuals</text>
+                  <text x="430" y="95" fill="#a78bfa" font-size="11">Projection</text>
+                </svg>
               </div>
             </div>
-            <div class="kpi-card">
-              <div class="kpi-title">Model Latency</div>
-              <div class="kpi-value-row">
-                <span class="kpi-value">820ms</span>
-                <span class="kpi-badge success">-5%</span>
+            <div class="aa-side-stack">
+              <div class="aa-panel">
+                <div class="aa-panel-head">
+                  <div>
+                    <div class="aa-panel-title">Fraud Rate Forecast</div>
+                    <p class="aa-panel-sub">95% confidence band</p>
+                  </div>
+                  <span class="aa-tag subtle">Predictive</span>
+                </div>
+                <div class="aa-chart small">
+                  <svg viewBox="0 0 300 180" role="img" aria-label="Fraud forecast">
+                    <defs>
+                      <linearGradient id="aaForecast" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0%" stop-color="rgba(248,113,113,0.45)" />
+                        <stop offset="100%" stop-color="rgba(248,113,113,0.05)" />
+                      </linearGradient>
+                    </defs>
+                    <rect x="0" y="0" width="300" height="180" fill="#0b1118" stroke="#1f2937" />
+                    <g stroke="#1f2937" stroke-width="1" stroke-dasharray="4 4">
+                      <line x1="30" y1="40" x2="270" y2="40" />
+                      <line x1="30" y1="80" x2="270" y2="80" />
+                      <line x1="30" y1="120" x2="270" y2="120" />
+                    </g>
+                    <path d="M30,80 L90,95 L150,70 L210,75 L270,65 L270,115 L210,125 L150,140 L90,120 L30,135 Z" fill="url(#aaForecast)" />
+                    <polyline points="30,90 90,105 150,82 210,90 270,78" fill="none" stroke="#f87171" stroke-width="2" />
+                    <polyline points="30,70 90,85 150,60 210,68 270,55" fill="none" stroke="#f87171" stroke-width="2" stroke-dasharray="5 4" />
+                    <circle cx="90" cy="105" r="3" fill="#f87171" />
+                    <circle cx="150" cy="82" r="3" fill="#f87171" />
+                    <circle cx="210" cy="90" r="3" fill="#f87171" />
+                    <text x="36" y="165" fill="#94a3b8" font-size="10">Nov 1</text>
+                    <text x="120" y="165" fill="#94a3b8" font-size="10">Nov 15</text>
+                    <text x="210" y="165" fill="#94a3b8" font-size="10">Nov 29</text>
+                  </svg>
+                </div>
               </div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-title">Vendor SLA</div>
-              <div class="kpi-value-row">
-                <span class="kpi-value">99.7%</span>
-                <span class="kpi-badge neutral">stable</span>
-              </div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-title">Chargeback Rate</div>
-              <div class="kpi-value-row">
-                <span class="kpi-value">0.09%</span>
-                <span class="kpi-badge success">-0.01%</span>
-              </div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-title">Fraud Resiliency</div>
-              <div class="kpi-value-row">
-                <span class="kpi-value">87 / 100</span>
-                <span class="kpi-badge info">i</span>
+              <div class="aa-panel aa-vintage">
+                <div class="aa-panel-head">
+                  <div>
+                    <div class="aa-panel-title">Proj. Ultimate Fraud Rate</div>
+                    <p class="aa-panel-sub">Cohort vintage trajectory</p>
+                  </div>
+                  <span class="aa-tag success">0.45%</span>
+                </div>
+                <div class="aa-vintage-body">
+                  <div class="aa-vintage-metrics">
+                    <div>
+                      <p class="aa-label">Realized</p>
+                      <p class="aa-value">0.09%</p>
+                    </div>
+                    <div>
+                      <p class="aa-label">Delta</p>
+                      <p class="aa-value warn">+0.02%</p>
+                    </div>
+                  </div>
+                  <div class="aa-chart tiny">
+                    <svg viewBox="0 0 320 70" role="img" aria-label="Vintage chart">
+                      <polyline points="10,55 90,40 170,30 250,20 310,18" fill="none" stroke="#f87171" stroke-width="3" stroke-dasharray="5 4" />
+                      <polyline points="10,55 90,50 170,48 250,46 310,44" fill="none" stroke="#f87171" stroke-width="3" />
+                      <circle cx="90" cy="50" r="4" fill="#f87171" />
+                      <circle cx="170" cy="48" r="4" fill="#f87171" />
+                      <circle cx="250" cy="46" r="4" fill="#f87171" />
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="charts-row">
-            <div class="chart-card">
-              <div class="card-header">Transaction Volume & Approval Rate</div>
-              <div class="chart-placeholder">
-                <svg viewBox="0 0 600 200" width="100%" height="100%" preserveAspectRatio="none">
-                  <line x1="0" y1="40" x2="600" y2="40" stroke="#334155" stroke-dasharray="4" />
-                  <line x1="0" y1="80" x2="600" y2="80" stroke="#334155" stroke-dasharray="4" />
-                  <line x1="0" y1="120" x2="600" y2="120" stroke="#334155" stroke-dasharray="4" />
-                  <line x1="0" y1="160" x2="600" y2="160" stroke="#334155" stroke-dasharray="4" />
-                  <path d="M0,120 C100,100 200,110 300,80 S500,60 600,50" fill="none" stroke="#3b82f6"
-                    stroke-width="2" />
-                  <circle cx="150" cy="108" r="3" fill="#3b82f6" />
-                  <circle cx="300" cy="80" r="3" fill="#3b82f6" />
-                  <circle cx="450" cy="55" r="3" fill="#3b82f6" />
-                  <path d="M0,50 C150,50 300,45 450,40 S600,35 600,35" fill="none" stroke="#4ade80"
-                    stroke-width="2" />
-                  <circle cx="150" cy="50" r="3" fill="#4ade80" />
-                  <circle cx="300" cy="45" r="3" fill="#4ade80" />
-                  <circle cx="450" cy="40" r="3" fill="#4ade80" />
-                  <text x="10" y="190" fill="#64748b" font-size="10">Nov 1</text>
-                  <text x="150" y="190" fill="#64748b" font-size="10">Nov 2</text>
-                  <text x="300" y="190" fill="#64748b" font-size="10">Nov 3</text>
-                  <text x="450" y="190" fill="#64748b" font-size="10">Nov 4</text>
-                  <text x="580" y="190" fill="#64748b" font-size="10">Nov 5</text>
-                </svg>
+
+          <div class="aa-region-section">
+            <div class="aa-section-head">
+              <div>
+                <div class="aa-panel-title">Regional Intelligence</div>
+                <p class="aa-panel-sub">Where to double down and where to defend.</p>
               </div>
+              <span class="aa-chip muted">Agent-led</span>
             </div>
-            <div class="chart-card">
-              <div class="card-header">Fraud Rate Forecast</div>
-              <div class="chart-placeholder">
-                <svg viewBox="0 0 300 200" width="100%" height="100%" preserveAspectRatio="none">
-                  <line x1="0" y1="40" x2="300" y2="40" stroke="#334155" stroke-dasharray="4" />
-                  <line x1="0" y1="80" x2="300" y2="80" stroke="#334155" stroke-dasharray="4" />
-                  <line x1="0" y1="120" x2="300" y2="120" stroke="#334155" stroke-dasharray="4" />
-                  <line x1="0" y1="160" x2="300" y2="160" stroke="#334155" stroke-dasharray="4" />
-                  <path d="M0,100 C50,80 100,120 150,60 S250,40 300,80" fill="none" stroke="#f97316"
-                    stroke-width="2" />
-                  <circle cx="75" cy="90" r="3" fill="#f97316" />
-                  <circle cx="150" cy="60" r="3" fill="#f97316" />
-                  <circle cx="225" cy="50" r="3" fill="#f97316" />
-                  <text x="10" y="190" fill="#64748b" font-size="10">Nov 1</text>
-                  <text x="80" y="190" fill="#64748b" font-size="10">Nov 2</text>
-                  <text x="150" y="190" fill="#64748b" font-size="10">Nov 3</text>
-                  <text x="220" y="190" fill="#64748b" font-size="10">Nov 4</text>
-                  <text x="280" y="190" fill="#64748b" font-size="10">Nov 5</text>
-                </svg>
+            <div class="aa-region-grid">
+              <div class="aa-region-card opportunity">
+                <div class="aa-region-top">
+                  <span class="aa-region-name">US & Canada</span>
+                  <span class="aa-region-pill">Optimization</span>
+                </div>
+                <p class="aa-region-note">Clean traffic increase from marketing push. Agent relaxed 3 velocity rules.</p>
+                <div class="aa-region-metric">
+                  <span>Approval Lift</span>
+                  <span class="aa-metric-value up">+2.4%</span>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="charts-row triple">
-            <div class="chart-card">
-              <div class="card-header">User Cohorts Behavior</div>
-              <div class="chart-placeholder">
-                <svg viewBox="0 0 600 200" width="100%" height="100%" preserveAspectRatio="none">
-                  <line x1="0" y1="40" x2="600" y2="40" stroke="#334155" stroke-dasharray="4" />
-                  <line x1="0" y1="80" x2="600" y2="80" stroke="#334155" stroke-dasharray="4" />
-                  <line x1="0" y1="120" x2="600" y2="120" stroke="#334155" stroke-dasharray="4" />
-                  <path d="M0,150 L80,135 L160,125 L240,110 L320,95 L400,90 L480,100 L560,110 L560,200 L0,200 Z"
-                    fill="rgba(56,189,248,0.12)" />
-                  <path d="M0,180 L80,175 L160,165 L240,150 L320,140 L400,130 L480,125 L560,120 L560,200 L0,200 Z"
-                    fill="rgba(167,139,250,0.08)" />
-                  <path d="M0,140 L80,120 L160,105 L240,92 L320,82 L400,88 L480,94 L560,100" fill="none"
-                    stroke="#38bdf8" stroke-width="2" />
-                  <circle cx="120" cy="112" r="3" fill="#38bdf8" />
-                  <circle cx="240" cy="92" r="4" fill="#38bdf8" />
-                  <circle cx="440" cy="90" r="3" fill="#38bdf8" />
-                  <path d="M0,155 L80,150 L160,145 L240,138 L320,130 L400,118 L480,112 L560,107" fill="none"
-                    stroke="#a78bfa" stroke-width="2" stroke-dasharray="6 4" />
-                  <circle cx="360" cy="124" r="4" fill="#a78bfa" />
-                  <path d="M0,185 L80,172 L160,160 L240,142 L320,125 L400,112 L480,106 L560,104" fill="none"
-                    stroke="#f97316" stroke-width="2" />
-                  <circle cx="320" cy="125" r="4" fill="#f97316" />
-                  <line x1="300" y1="20" x2="300" y2="180" stroke="#64748b" stroke-dasharray="2 4" />
-                  <text x="310" y="30" fill="#94a3b8" font-size="10">Week 5 retention</text>
-                </svg>
+              <div class="aa-region-card watch">
+                <div class="aa-region-top">
+                  <span class="aa-region-name">Europe</span>
+                  <span class="aa-region-pill">Monitoring</span>
+                </div>
+                <p class="aa-region-note">High 3DS failure rates in France. Agent rerouted 15% to alternate auth.</p>
+                <div class="aa-region-metric">
+                  <span>3DS Success</span>
+                  <span class="aa-metric-value neutral">82.1%</span>
+                </div>
               </div>
-              <div class="chart-legend">
-                <span class="legend-item"><span class="legend-dot" style="background:#38bdf8"></span>New</span>
-                <span class="legend-item"><span class="legend-dot" style="background:#a78bfa"></span>Returning</span>
-                <span class="legend-item"><span class="legend-dot" style="background:#f97316"></span>Power</span>
+              <div class="aa-region-card alert">
+                <div class="aa-region-top">
+                  <span class="aa-region-name">Latin America</span>
+                  <span class="aa-region-pill">Threat</span>
+                </div>
+                <p class="aa-region-note">Card testing attack detected in Brazil. 4,200 requests blocked.</p>
+                <div class="aa-region-metric">
+                  <span>Threats Blocked</span>
+                  <span class="aa-metric-value warn">4,200</span>
+                </div>
               </div>
-            </div>
-            <div class="chart-card">
-              <div class="card-header">Support Tickets Trend</div>
-              <div class="chart-placeholder">
-                <svg viewBox="0 0 600 200" width="100%" height="100%" preserveAspectRatio="none">
-                  <line x1="0" y1="40" x2="600" y2="40" stroke="#334155" stroke-dasharray="4" />
-                  <line x1="0" y1="80" x2="600" y2="80" stroke="#334155" stroke-dasharray="4" />
-                  <line x1="0" y1="120" x2="600" y2="120" stroke="#334155" stroke-dasharray="4" />
-                  <line x1="0" y1="160" x2="600" y2="160" stroke="#334155" stroke-dasharray="4" />
-                  <path d="M0,130 L80,128 L160,125 L240,135 L320,150 L400,160 L480,148 L560,140 L560,200 L0,200 Z"
-                    fill="rgba(248,113,113,0.08)" />
-                  <path d="M0,150 L80,138 L160,130 L240,122 L320,138 L400,152 L480,140 L560,132" fill="none"
-                    stroke="#f87171" stroke-width="2" />
-                  <circle cx="200" cy="126" r="3" fill="#f87171" />
-                  <circle cx="360" cy="145" r="4" fill="#f87171" />
-                  <circle cx="520" cy="135" r="3" fill="#f87171" />
-                  <path d="M0,120 L80,112 L160,104 L240,92 L320,98 L400,105 L480,94 L560,86" fill="none"
-                    stroke="#4ade80" stroke-width="2" />
-                  <circle cx="260" cy="94" r="3" fill="#4ade80" />
-                  <circle cx="440" cy="100" r="3" fill="#4ade80" />
-                  <path d="M0,130 L600,130" stroke="#facc15" stroke-width="2" stroke-dasharray="5 5" />
-                  <rect x="300" y="110" width="6" height="40" fill="rgba(248,181,0,0.6)" />
-                  <rect x="420" y="120" width="6" height="35" fill="rgba(248,181,0,0.6)" />
-                  <text x="310" y="115" fill="#facc15" font-size="9">Promo launch</text>
-                </svg>
-              </div>
-              <div class="chart-legend">
-                <span class="legend-item"><span class="legend-dot" style="background:#f87171"></span>Open</span>
-                <span class="legend-item"><span class="legend-dot" style="background:#4ade80"></span>Resolved</span>
-                <span class="legend-item"><span class="legend-dot" style="background:#facc15"></span>Threshold</span>
-              </div>
-            </div>
-            <div class="chart-card">
-              <div class="card-header">Product Line Snapshot</div>
-              <div class="chart-placeholder">
-                <svg viewBox="0 0 600 200" width="100%" height="100%" preserveAspectRatio="none">
-                  <line x1="0" y1="40" x2="600" y2="40" stroke="#334155" stroke-dasharray="4" />
-                  <line x1="0" y1="80" x2="600" y2="80" stroke="#334155" stroke-dasharray="4" />
-                  <line x1="0" y1="120" x2="600" y2="120" stroke="#334155" stroke-dasharray="4" />
-                  <line x1="0" y1="160" x2="600" y2="160" stroke="#334155" stroke-dasharray="4" />
-                  <rect x="40" y="95" width="50" height="65" fill="#38bdf8" rx="6" />
-                  <rect x="140" y="70" width="50" height="90" fill="#34d399" rx="6" />
-                  <rect x="240" y="50" width="50" height="110" fill="#f97316" rx="6" />
-                  <rect x="340" y="80" width="50" height="80" fill="#a78bfa" rx="6" />
-                  <rect x="440" y="105" width="50" height="55" fill="#f87171" rx="6" />
-                  <rect x="540" y="85" width="50" height="75" fill="#22d3ee" rx="6" />
-                  <path d="M65,95 L165,75 L265,55 L365,85 L465,110 L565,90" fill="none" stroke="#facc15"
-                    stroke-width="2" stroke-dasharray="4 3" />
-                  <circle cx="265" cy="55" r="4" fill="#facc15" />
-                  <path d="M65,160 L165,150 L265,130 L365,135 L465,140 L565,145" fill="none" stroke="#94a3b8"
-                    stroke-width="2" />
-                  <circle cx="65" cy="95" r="3" fill="#38bdf8" />
-                  <circle cx="165" cy="70" r="3" fill="#34d399" />
-                  <circle cx="265" cy="50" r="3" fill="#f97316" />
-                  <circle cx="365" cy="80" r="3" fill="#a78bfa" />
-                  <circle cx="465" cy="105" r="3" fill="#f87171" />
-                  <circle cx="565" cy="85" r="3" fill="#22d3ee" />
-                  <text x="48" y="188" fill="#64748b" font-size="10">IDV</text>
-                  <text x="148" y="188" fill="#64748b" font-size="10">Wallet</text>
-                  <text x="248" y="188" fill="#64748b" font-size="10">Lending</text>
-                  <text x="348" y="188" fill="#64748b" font-size="10">Risk API</text>
-                  <text x="448" y="188" fill="#64748b" font-size="10">Payouts</text>
-                  <text x="548" y="188" fill="#64748b" font-size="10">Trust</text>
-                </svg>
-              </div>
-              <div class="chart-legend">
-                <span class="legend-item"><span class="legend-dot" style="background:#f97316"></span>GMV</span>
-                <span class="legend-item"><span class="legend-dot" style="background:#facc15"></span>Revenue</span>
-                <span class="legend-item"><span class="legend-dot" style="background:#94a3b8"></span>Conversion</span>
+              <div class="aa-region-card stable">
+                <div class="aa-region-top">
+                  <span class="aa-region-name">APAC</span>
+                  <span class="aa-region-pill">Stable</span>
+                </div>
+                <p class="aa-region-note">No significant anomalies. Payment mix holding seasonal baseline.</p>
+                <div class="aa-region-metric">
+                  <span>Fraud Rate</span>
+                  <span class="aa-metric-value">0.08%</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="regional-row">
-            <div class="regional-card">
-              <div class="reg-header">
-                US & CANADA
-                <span class="kpi-badge info">Opportunity</span>
+
+          <div class="aa-bottom-grid">
+            <div class="aa-panel">
+              <div class="aa-panel-head">
+                <div>
+                  <div class="aa-panel-title">Fraud Rate by Product</div>
+                  <p class="aa-panel-sub">Percent of traffic flagged by product line.</p>
+                </div>
               </div>
-              <div class="reg-stat">Approval <span>97%</span></div>
-              <div class="reg-stat">Fraud <span>8.0%</span></div>
-              <div class="reg-stat">Volume <span>540k tx</span></div>
-              <div class="reg-trend up">+4.0%</div>
-              <div class="reg-note">Marketing push is adding clean shoppers.</div>
+              <div class="aa-chart medium">
+                <svg viewBox="0 0 520 220" role="img" aria-label="Fraud rate by product">
+                  <rect x="0" y="0" width="520" height="220" fill="#0b1118" stroke="#1f2937" />
+                  <g stroke="#1f2937" stroke-dasharray="4 4">
+                    <line x1="80" y1="50" x2="480" y2="50" />
+                    <line x1="80" y1="100" x2="480" y2="100" />
+                    <line x1="80" y1="150" x2="480" y2="150" />
+                  </g>
+                  <rect x="120" y="120" width="50" height="80" rx="6" fill="#ef4444" />
+                  <rect x="220" y="60" width="50" height="140" rx="6" fill="#ef4444" />
+                  <rect x="320" y="40" width="50" height="160" rx="6" fill="#ef4444" />
+                  <rect x="420" y="90" width="50" height="110" rx="6" fill="#ef4444" />
+                  <text x="122" y="210" fill="#94a3b8" font-size="11">Checking</text>
+                  <text x="222" y="210" fill="#94a3b8" font-size="11">Savings</text>
+                  <text x="330" y="210" fill="#94a3b8" font-size="11">Lending</text>
+                  <text x="428" y="210" fill="#94a3b8" font-size="11">Crypto</text>
+                </svg>
+              </div>
             </div>
-            <div class="regional-card">
-              <div class="reg-header">
-                EUROPE
-                <span class="kpi-badge warning">Watch</span>
+            <div class="aa-panel">
+              <div class="aa-panel-head">
+                <div>
+                  <div class="aa-panel-title">Agent Workflow & Recovery</div>
+                  <p class="aa-panel-sub">Automation vs human review</p>
+                </div>
+                <span class="aa-tag subtle">Stacked</span>
               </div>
-              <div class="reg-stat">Approval <span>94%</span></div>
-              <div class="reg-stat">Fraud <span>11.0%</span></div>
-              <div class="reg-stat">Volume <span>210k tx</span></div>
-              <div class="reg-trend down">-2.1%</div>
-              <div class="reg-note">Checkout experiment still stabilizing.</div>
-            </div>
-            <div class="regional-card">
-              <div class="reg-header">
-                LATIN AMERICA
-                <span class="kpi-badge critical">Alert</span>
+              <div class="aa-chart medium">
+                <svg viewBox="0 0 520 220" role="img" aria-label="Agent workflow">
+                  <rect x="0" y="0" width="520" height="220" fill="#0b1118" stroke="#1f2937" />
+                  <g stroke="#1f2937" stroke-dasharray="4 4">
+                    <line x1="60" y1="60" x2="480" y2="60" />
+                    <line x1="60" y1="110" x2="480" y2="110" />
+                    <line x1="60" y1="160" x2="480" y2="160" />
+                  </g>
+                  <polyline points="60,170 140,165 220,155 300,150 380,140 460,135" fill="#6366f1" stroke="#6366f1" stroke-width="0" opacity="0.25" />
+                  <polyline points="60,150 140,142 220,136 300,132 380,128 460,122" fill="none" stroke="#6366f1" stroke-width="3" />
+                  <polyline points="60,180 140,172 220,168 300,165 380,160 460,154" fill="none" stroke="#10b981" stroke-width="3" />
+                  <polyline points="60,190 140,188 220,186 300,184 380,182 460,180" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="5 4" />
+                  <circle cx="220" cy="136" r="4" fill="#6366f1" />
+                  <circle cx="300" cy="132" r="4" fill="#6366f1" />
+                  <circle cx="380" cy="160" r="4" fill="#10b981" />
+                  <text x="80" y="205" fill="#94a3b8" font-size="11">Nov 1</text>
+                  <text x="200" y="205" fill="#94a3b8" font-size="11">Nov 15</text>
+                  <text x="360" y="205" fill="#94a3b8" font-size="11">Nov 29</text>
+                </svg>
               </div>
-              <div class="reg-stat">Approval <span>90%</span></div>
-              <div class="reg-stat">Fraud <span>15.0%</span></div>
-              <div class="reg-stat">Volume <span>190k tx</span></div>
-              <div class="reg-trend up">+3.4%</div>
-              <div class="reg-note">Chargebacks concentrated in Brazil.</div>
-            </div>
-            <div class="regional-card">
-              <div class="reg-header">
-                APAC
-                <span class="kpi-badge neutral">Stable</span>
-              </div>
-              <div class="reg-stat">Approval <span>96%</span></div>
-              <div class="reg-stat">Fraud <span>7.0%</span></div>
-              <div class="reg-stat">Volume <span>260k tx</span></div>
-              <div class="reg-trend up">+1.2%</div>
-              <div class="reg-note">Cash-on-delivery pilot fully rolled out.</div>
             </div>
           </div>
         </div>
